@@ -13,7 +13,7 @@ export function HeroSection() {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <h1 className="text-5xl font-serif font-normal tracking-tight text-foreground sm:text-7xl md:text-8xl">
-          hi, I'm Serafin 👋🏽
+          hi, I&apos;m Serafin 👋🏽
         </h1>
       </motion.div>
       

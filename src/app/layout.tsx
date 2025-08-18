@@ -26,7 +26,10 @@ const instrumentSerif = Instrument_Serif({
 export const metadata: Metadata = {
   title: {
     template: '%s · Serafin Sanchez',
-    default: 'Serafin Sanchez - Developer Portfolio',
+    default: 'Serafin Sanchez',
+  },
+  icons: {
+    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👋🏽</text></svg>",
   },
   description: 'AI-Native Software Developer building the future with intelligent applications and modern web technologies.',
   keywords: [
@@ -53,8 +56,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: '/',
-    siteName: 'Serafin Sanchez - Portfolio',
-    title: 'Serafin Sanchez - Developer Portfolio',
+    siteName: 'Serafin Sanchez',
+    title: 'Serafin Sanchez',
     description: 'AI-Native Software Developer building the future with intelligent applications and modern web technologies.',
     images: [
       {
@@ -69,7 +72,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@serafinsanchez_',
     creator: '@serafinsanchez_',
-    title: 'Serafin Sanchez - Developer Portfolio',
+    title: 'Serafin Sanchez',
     description: 'AI-Native Software Developer building the future with intelligent applications and modern web technologies.',
     images: ['/og-image.jpg'],
   },
