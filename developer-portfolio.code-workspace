@@ -1,0 +1,23 @@
+{
+  "folders": [
+    {
+      "name": "Developer Portfolio",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "git.remote.origin.url": "https://github.com/serafinsanchez/developer-portfolio.git",
+    "git.defaultBranchName": "main",
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "git.autofetchPeriod": 180
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-vscode.vscode-typescript-next",
+      "bradlc.vscode-tailwindcss",
+      "esbenp.prettier-vscode",
+      "ms-vscode.vscode-eslint"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "git.remote.origin.url": "https://github.com/serafinsanchez/developer-portfolio.git",
+  "git.defaultBranchName": "main",
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "git.autofetchPeriod": 180
+}
