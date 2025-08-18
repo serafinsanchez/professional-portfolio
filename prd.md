@@ -1,141 +1,156 @@
-Got it ✅ I’ll draft a **formal PRD** for your portfolio site based on the answers we outlined. This will read like something you could hand to a developer/designer (even if that’s you) to align on vision, requirements, and success criteria.
-
----
-
 # Product Requirements Document (PRD)
 
-**Product Name:** Developer Portfolio
-**Platform:** Next.js with MDX for content management
-**Owner:** \[Your Name]
-**Date:** \[Today’s Date]
+**Project:** Developer Portfolio Website
+**Platform:** Next.js 15 (App Router) + MDX
+**Author:** \[Your Name]
+**Date:** \[Today]
 
 ---
 
 ## 1. Overview
 
-The Developer Portfolio is a premium, minimal, and modern web presence designed to showcase technical skills, work history, projects, and personal branding. The target audience includes hiring managers, recruiters, and potential freelance clients. The site should balance a sleek aesthetic (inspired by Awwwards/Framer sites) with strong usability and performance.
+A **premium, minimal, and modern developer portfolio website** designed to impress both **hiring managers** and **freelance clients**. The site showcases personal brand, skills, work history, and projects in a way that feels **design-forward and interactive**, inspired by Awwwards/Framer-level sites.
 
 ---
 
-## 2. Goals & Objectives
+## 2. Goals
 
-* Establish a professional personal brand.
-* Highlight work history and notable projects in a visually engaging format.
-* Provide clear contact options for potential employers and clients.
-* Demonstrate design taste, coding ability, and attention to detail through the site itself.
-* Enable easy content management via MDX.
+* Position \[Your Name] as a **high-level developer** with strong design sensibilities.
+* Provide a central hub for **About, Work History, Projects, Skills, and Contact**.
+* Create a **memorable digital experience** that feels polished and premium.
+* Make content **easy to update** using **MDX** (no CMS needed).
 
 ---
 
 ## 3. Target Audience
 
-* **Hiring Managers / Recruiters**: Looking for clarity of experience, skills, and portfolio.
-* **Freelance Clients**: Seeking reassurance of professionalism, past work, and personality.
-* **Peers / Developers**: Interested in code quality, technical depth, and blog/writing.
+* **Hiring managers & recruiters** → looking for skills, work history, and credibility.
+* **Potential freelance clients** → want to see project quality, testimonials, and ways to connect.
+* **Peers / dev community** → may explore blog or case studies.
 
 ---
 
-## 4. Key Features
+## 4. Features & Requirements
 
-### 4.1 Content Sections
+### 4.1 Pages & Sections
 
-* **Landing/Hero**:
+* **Landing / Hero Section**
 
-  * Strong name/logo identity.
-  * Tagline (e.g., “I build premium digital experiences with clean code and thoughtful design”).
-  * Subtle animated background/interaction.
+  * Name, tagline, call-to-action (scroll or contact).
+  * Animated headline (Motion.dev).
 
-* **About Me**:
+* **About Me**
 
-  * Short biography with personal + professional flavor.
-  * Optional portrait or abstract avatar.
+  * Short bio in MDX.
+  * Optional personal photo/illustration.
 
-* **Work History**:
+* **Work History**
 
-  * Vertical timeline of past roles with company logos, positions, and key contributions.
-  * MDX-driven for easy editing.
+  * Timeline with company logos, roles, and contributions.
+  * MDX-powered entries.
 
-* **Projects Showcase**:
+* **Project Showcase**
 
-  * Featured projects with case-study layout (overview, role, stack, screenshots, links).
-  * Secondary projects displayed in a grid/tile layout.
-  * MDX content model.
+  * Hero projects with case-study pages (overview, stack, screenshots, links).
+  * Secondary projects as hover cards.
+  * MDX-powered entries.
 
-* **Skills & Technologies**:
+* **Skills & Technologies**
 
-  * Categorized grid (Frontend, Backend, Tools/DevOps, Design).
-  * Interactive hover states with details (years used, level, or last used).
+  * Categorized grid (Frontend, Backend, Tools, Design).
+  * Interactive hover details.
+  * MDX-powered.
 
-* **Writing/Blog (Optional)**:
+* **Contact**
 
-  * MDX-based articles.
-  * Tagging and categorization.
+  * Contact form (name, email, message) → handled via **Resend API** in Next.js API route.
+  * External links (GitHub, LinkedIn, X/Twitter, etc.).
 
-* **Contact & Social Links**:
+* **(Optional) Blog / Writing**
 
-  * Premium contact form (name, email, message → notification via email service).
-  * External platform links (GitHub, LinkedIn, Twitter/X, optional Dribbble/Behance).
-
----
-
-### 4.2 Design & Aesthetic Requirements
-
-* **Look & Feel**: Premium, minimal, modern, “expensive” feel (Awwwards-level).
-* **Typography**:
-
-  * Headings: Modern display font.
-  * Body: Clean sans-serif (e.g., Inter, Neue Montreal).
-* **Colors**: Dark base (black/gray) + white + one bright accent (electric blue/neon gradient).
-* **Mode Toggle**: Dark mode by default with toggle option.
-* **Animations**:
-
-  * Smooth page transitions.
-  * Micro-interactions (hover states, link underlines, subtle parallax).
-  * Cursor effect optional.
+  * MDX-based posts.
+  * Auto-generated index page.
 
 ---
 
-### 4.3 Technical Requirements
+### 4.2 Design & UX
 
-* **Framework**: Next.js (hybrid SSG/SSR).
-* **Content**: MDX-driven for projects, work history, skills, blog, and about.
-* **Hosting**: Vercel.
-* **Performance**: Lighthouse score 90+ (performance, accessibility, SEO).
-* **Analytics**: Plausible integration.
-* **SEO**: Open Graph + Twitter Card meta with custom social preview images.
-* **Contact Form**: Integrated with Resend/Formspree for notifications.
-* **Dynamic Enhancements**: Pull GitHub repo data (stars/forks) for projects (if feasible).
+* **Look & Feel:** Premium, minimal, dark-first with accent color (electric blue or neon gradient).
+* **Typography:** Inter (UI), paired with bold display font for headings.
+* **Theme:** Dark mode default, light mode toggle via **next-themes**.
+* **Animations:** Smooth page transitions, hover micro-interactions, parallax — via **Motion.dev**.
+* **Accessibility:** WCAG AA compliance, alt text for all images.
 
 ---
 
-## 5. Content Model
+### 4.3 Tech Stack
 
-* `/content/about.mdx`
-* `/content/work/[company].mdx`
-* `/content/projects/[slug].mdx`
-* `/content/skills.mdx`
-* `/content/blog/[slug].mdx`
-
----
-
-## 6. Success Metrics
-
-* **Design Quality**: Feels premium and modern, comparable to Awwwards/Framer sites.
-* **Performance**: Achieves 90+ Lighthouse score.
-* **Engagement**:
-
-  * Hiring managers can quickly find About/Work/Skills.
-  * Freelance clients can easily view projects and contact.
-* **Maintainability**: Easy content updates via MDX files.
-* **Scalability**: Site structure allows for future additions (testimonials, speaking, newsletter).
+* **Framework:** Next.js 15 (App Router) + React 19.
+* **Language:** TypeScript.
+* **Styling:** Tailwind CSS v4 + shadcn/ui (UI components).
+* **Content:** Local MDX files compiled with `@next/mdx`.
+* **Forms:** Resend API for email delivery.
+* **Analytics:** Plausible (via next-plausible or proxy).
+* **Hosting:** Vercel.
+* **Animations:** Motion.dev.
 
 ---
 
-## 7. Future Considerations
+### 4.4 Content Model (MDX)
 
-* Add testimonials/client logos section.
-* Expand blog with categories and RSS.
-* Introduce newsletter/email capture.
-* Add “Now” page (inspired by Derek Sivers’ /now movement).
+* `/content/about.mdx` → About Me.
+* `/content/work/[company].mdx` → Work History entries.
+* `/content/projects/[slug].mdx` → Project case studies.
+* `/content/skills.mdx` → Skills list.
+* `/content/blog/[slug].mdx` → Blog posts (optional).
+
+---
+
+### 4.5 Technical Constraints
+
+* **Node.js ≥ 18.18** (20/22 LTS recommended).
+* **Lighthouse ≥ 90** (Performance, SEO, Accessibility).
+* **Avoid deprecated libs**:
+
+  * Use **Motion.dev** instead of framer-motion.
+  * Use **@next/mdx** instead of next-mdx-remote (unless remote MDX needed).
+  * Skip Contentlayer (deprecated).
+* **Ensure ad-block resilience** for analytics (proxy Plausible).
+
+---
+
+### 4.6 Success Metrics
+
+* ✅ Page load time < 2s on 3G.
+* ✅ 90+ Lighthouse across Performance, SEO, Accessibility.
+* ✅ Recruiters/clients can find core info (skills, work history, projects, contact) in ≤ 2 clicks.
+* ✅ Site editable with MDX without touching React components.
+* ✅ Contact form sends reliably via Resend.
+
+---
+
+## 5. Future-Proofing
+
+* Extendable to **Testimonials**, **Speaking**, **Newsletter**, or **Shop**.
+* Content-first architecture — new sections only require adding MDX files.
+* Design system built on shadcn/ui for rapid iteration.
+
+---
+
+## 6. Timeline (suggested)
+
+* Week 1: Setup project (Next.js, Tailwind, shadcn/ui, MDX).
+* Week 2: Build sections (About, Work, Projects, Skills).
+* Week 3: Add animations, theme toggle, contact form.
+* Week 4: Polish, test performance/SEO, deploy to Vercel.
+
+---
+
+## 7. Risks & Mitigation
+
+* **Animation regressions** (React 19 breaking framer-motion) → Use Motion.dev.
+* **Analytics blocking** → Plausible proxy setup.
+* **Maintainer drift (MDX libs)** → Stick with official @next/mdx plugin.
+* **Recruiters needing PDFs** → Optional future feature: “Download Resume” button.
 
 ---

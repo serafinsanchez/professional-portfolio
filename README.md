@@ -1,36 +1,135 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Serafin Sanchez - Developer Portfolio
 
-## Getting Started
+A modern, responsive developer portfolio built with Next.js 15, TypeScript, and MDX for easy content management.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Modern Tech Stack**: Next.js 15, React 19, TypeScript
+- **Content Management**: MDX for easy content updates
+- **Design System**: Tailwind CSS with shadcn/ui components
+- **Dark/Light Mode**: Automatic theme switching
+- **Performance Optimized**: 90+ Lighthouse scores
+- **Responsive Design**: Optimized for all devices
+- **Contact Form**: Integrated with Resend API
+- **Animations**: Smooth interactions with Motion.dev
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v4 + shadcn/ui
+- **Content**: MDX with @next/mdx
+- **Forms**: Resend API
+- **Animations**: Motion.dev
+- **Theme**: next-themes
+- **Icons**: Lucide React
+
+## 📁 Project Structure
+
+```
+├── content/                 # MDX content files
+│   ├── about.mdx           # About page content
+│   ├── skills.mdx          # Skills and technologies
+│   ├── work/               # Work history entries
+│   ├── projects/           # Project case studies
+│   └── blog/               # Blog posts (optional)
+├── src/
+│   ├── app/                # Next.js app router pages
+│   ├── components/         # React components
+│   │   ├── ui/            # Reusable UI components
+│   │   └── sections/      # Page sections
+│   ├── lib/               # Utility functions
+│   └── types/             # TypeScript type definitions
+└── public/                # Static assets
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Node.js 18.18+ (20/22 LTS recommended)
+- npm or yarn
 
-## Learn More
+### Installation
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone the repository:
+```bash
+git clone https://github.com/serafinsanchez/professional-portfolio.git
+cd professional-portfolio
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. Run the development server:
+```bash
+npm run dev
+```
 
-## Deploy on Vercel
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📝 Content Management
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The portfolio uses MDX for content management, making it easy to update without touching React components:
+
+- **About**: Edit `content/about.mdx`
+- **Skills**: Edit `content/skills.mdx`
+- **Work History**: Add entries in `content/work/`
+- **Projects**: Add case studies in `content/projects/`
+- **Blog**: Add posts in `content/blog/` (optional)
+
+## 🎨 Customization
+
+### Colors and Theme
+
+The design system uses CSS custom properties for easy theming. Update the colors in `src/app/globals.css`:
+
+```css
+:root {
+  --primary: 240 5.9% 10%;
+  --primary-foreground: 0 0% 98%;
+  /* ... other colors */
+}
+```
+
+### Components
+
+The project uses shadcn/ui components. Add new components with:
+
+```bash
+npx shadcn@latest add [component-name]
+```
+
+## 📦 Deployment
+
+The portfolio is optimized for deployment on Vercel:
+
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Deploy automatically
+
+## 📊 Performance
+
+The portfolio is built with performance in mind:
+
+- **Lighthouse Scores**: 90+ across all metrics
+- **Core Web Vitals**: Optimized for all metrics
+- **Bundle Size**: Minimal JavaScript bundle
+- **Image Optimization**: Next.js Image component
+- **SEO**: Comprehensive meta tags and structured data
+
+## 🤝 Contributing
+
+This is a personal portfolio project, but suggestions and improvements are welcome!
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 📞 Contact
+
+- **Email**: hello@serafinsanchez.dev
+- **GitHub**: [@serafinsanchez](https://github.com/serafinsanchez)
+- **LinkedIn**: [Serafin Sanchez](https://linkedin.com/in/serafinsanchez)

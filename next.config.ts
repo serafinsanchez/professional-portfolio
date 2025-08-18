@@ -1,7 +1,21 @@
-import { withContentlayer } from 'next-contentlayer'
+import type { NextConfig } from "next";
+import createMDX from '@next/mdx';
 
-const nextConfig = {
-  /* config options here */
-}
+const withMDX = createMDX({
+  options: {
+    remarkPlugins: [],
+    rehypePlugins: [],
+  },
+});
 
-export default withContentlayer(nextConfig)
+const nextConfig: NextConfig = {
+  pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
+  experimental: {
+    mdxRs: true,
+  },
+  images: {
+    domains: ['github.com', 'avatars.githubusercontent.com'],
+  },
+};
+
+export default withMDX(nextConfig);
