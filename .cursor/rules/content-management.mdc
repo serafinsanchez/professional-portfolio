@@ -1,0 +1,46 @@
+# Content Management & MDX Standards
+
+## Content Structure
+Follow the content model outlined in [prd.md](mdc:prd.md):
+- `/content/about.mdx` - Personal biography and professional summary
+- `/content/work/[company].mdx` - Work history with company details
+- `/content/projects/[slug].mdx` - Project showcases with case studies
+- `/content/skills.mdx` - Skills and technologies organized by category
+- `/content/blog/[slug].mdx` - Blog posts and articles
+
+## MDX Frontmatter Standards
+Each MDX file should include proper frontmatter:
+```yaml
+---
+title: "Page Title"
+description: "Brief description for SEO"
+date: "YYYY-MM-DD"
+tags: [tag1, tag2]
+featured: true/false
+---
+```
+
+## Content Components
+- Use consistent heading hierarchy (h1, h2, h3)
+- Implement proper image handling with Next.js Image
+- Use MDX components for interactive elements
+- Maintain consistent formatting and spacing
+- Include proper alt text for accessibility
+
+## Content Organization
+- Group related content by category
+- Use consistent naming conventions for files
+- Implement proper tagging and categorization
+- Maintain content versioning and updates
+- Ensure content is easily editable by non-developers
+
+## SEO & Metadata
+- Include proper meta descriptions
+- Use semantic HTML structure
+- Implement Open Graph and Twitter Card meta tags
+- Optimize content for search engines
+- Use proper heading structure for content hierarchy
+description:
+globs:
+alwaysApply: false
+---

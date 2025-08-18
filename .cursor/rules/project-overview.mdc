@@ -1,0 +1,43 @@
+# Developer Portfolio Project Overview
+
+This is a premium, minimal, and modern developer portfolio built with Next.js 15, TypeScript, and Tailwind CSS. The project follows the specifications outlined in [prd.md](mdc:prd.md).
+
+## Project Goals
+- Establish professional personal brand
+- Showcase work history and projects
+- Provide clear contact options
+- Demonstrate design taste and coding ability
+- Enable easy content management via MDX
+
+## Tech Stack
+- **Framework**: Next.js 15 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v4
+- **Content**: MDX with Contentlayer
+- **Animations**: Framer Motion
+- **Theming**: next-themes (dark mode by default)
+- **UI Components**: Lucide React icons, class-variance-authority, clsx
+
+## Key Dependencies
+- `contentlayer` - MDX content management
+- `framer-motion` - Smooth animations and transitions
+- `next-themes` - Dark/light mode toggle
+- `rehype-*` & `remark-*` - MDX processing plugins
+
+## Project Structure
+- `src/app/` - Next.js App Router pages and layouts
+- `content/` - MDX content files (to be created)
+- `public/` - Static assets and images
+- `components/` - Reusable React components (to be created)
+- `lib/` - Utility functions and configurations (to be created)
+
+## Design Principles
+- Premium, minimal, modern aesthetic
+- Dark mode by default with toggle option
+- Smooth animations and micro-interactions
+- Responsive design with mobile-first approach
+- Performance-focused (Lighthouse 90+ target)
+description:
+globs:
+alwaysApply: false
+---

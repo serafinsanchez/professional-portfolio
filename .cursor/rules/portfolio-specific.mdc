@@ -1,0 +1,56 @@
+# Portfolio-Specific Implementation Guidelines
+
+## Page Structure Requirements
+Based on [prd.md](mdc:prd.md), implement these key sections:
+
+### Landing/Hero Section
+- Strong name/logo identity with premium feel
+- Tagline: "I build premium digital experiences with clean code and thoughtful design"
+- Subtle animated background/interaction
+- Clear call-to-action for navigation
+
+### About Me Section
+- Short biography with personal + professional flavor
+- Optional portrait or abstract avatar
+- Professional summary with key highlights
+- Skills overview with visual representation
+
+### Work History Section
+- Vertical timeline of past roles
+- Company logos, positions, and key contributions
+- MDX-driven content for easy editing
+- Interactive timeline with smooth animations
+
+### Projects Showcase
+- Featured projects with case-study layout
+- Include: overview, role, stack, screenshots, links
+- Secondary projects in grid/tile layout
+- MDX content model for easy updates
+
+### Skills & Technologies
+- Categorized grid: Frontend, Backend, Tools/DevOps, Design
+- Interactive hover states with details
+- Years used, proficiency level, or last used information
+- Visual skill representation (bars, circles, etc.)
+
+### Contact & Social
+- Premium contact form (name, email, message)
+- Integration with email service (Resend/Formspree)
+- External platform links (GitHub, LinkedIn, Twitter/X)
+- Professional contact information display
+
+## Content Management
+- Use Contentlayer for MDX processing
+- Implement proper content schemas
+- Create reusable MDX components
+- Enable easy content updates for non-developers
+
+## Theme Implementation
+- Dark mode by default with next-themes
+- Smooth theme transitions
+- Consistent color application across components
+- Proper contrast ratios for accessibility
+description:
+globs:
+alwaysApply: false
+---

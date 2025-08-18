@@ -1,0 +1,47 @@
+# Design System & Visual Standards
+
+## Color Palette
+- **Primary Background**: Dark theme by default (black/gray tones)
+- **Secondary Background**: Subtle gray variations
+- **Text**: White/light gray for readability
+- **Accent**: Electric blue/neon gradient for highlights
+- **Interactive**: Subtle hover states with opacity changes
+
+## Typography
+- **Headings**: Modern display font for impact
+- **Body**: Clean sans-serif (Inter, Neue Montreal)
+- **Hierarchy**: Clear visual distinction between heading levels
+- **Line Height**: Generous spacing for readability
+- **Font Weights**: Use weight variations for emphasis
+
+## Spacing & Layout
+- **Grid System**: Consistent 8px base unit
+- **Margins**: Use Tailwind spacing scale consistently
+- **Padding**: Generous internal spacing for breathing room
+- **Breakpoints**: Mobile-first responsive design
+- **Container**: Max-width constraints for optimal reading
+
+## Animation & Interactions
+- **Transitions**: Smooth, subtle animations (200-300ms)
+- **Hover States**: Micro-interactions with Framer Motion
+- **Page Transitions**: Seamless navigation between sections
+- **Loading States**: Elegant loading animations
+- **Parallax**: Subtle depth effects for premium feel
+
+## Component Standards
+- **Buttons**: Consistent styling with hover states
+- **Cards**: Subtle shadows and rounded corners
+- **Forms**: Clean, accessible input styling
+- **Navigation**: Clear, intuitive navigation patterns
+- **Icons**: Lucide React icons with consistent sizing
+
+## Accessibility
+- **Contrast**: Ensure sufficient color contrast ratios
+- **Focus States**: Visible focus indicators
+- **Keyboard Navigation**: Full keyboard accessibility
+- **Screen Readers**: Proper ARIA labels and semantic HTML
+- **Motion**: Respect user's motion preferences
+description:
+globs:
+alwaysApply: false
+---
