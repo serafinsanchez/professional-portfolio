@@ -1,21 +1,16 @@
-import type { NextConfig } from "next";
-import createMDX from '@next/mdx';
-
-const withMDX = createMDX({
-  options: {
-    remarkPlugins: [],
-    rehypePlugins: [],
-  },
-});
+import createMDX from '@next/mdx'
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
   experimental: {
-    mdxRs: true,
-  },
-  images: {
-    domains: ['github.com', 'avatars.githubusercontent.com'],
-  },
-};
+    optimizePackageImports: ['lucide-react'],
+    mdxRs: true
+  }
+}
 
-export default withMDX(nextConfig);
+const withMDX = createMDX({
+  // Add markdown plugins here, as desired
+})
+
+export default withMDX(nextConfig)
