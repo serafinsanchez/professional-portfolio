@@ -10,12 +10,12 @@ export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const navItems = [
-    { href: '#about', label: 'About' },
-    { href: '#work', label: 'Work' },
-    { href: '#projects', label: 'Projects' },
-    { href: '#blog', label: 'Blog' },
-    { href: '#skills', label: 'Skills' },
-    { href: '#contact', label: 'Contact' },
+    { href: '/#about', label: 'About' },
+    { href: '/#work', label: 'Work' },
+    { href: '/#projects', label: 'Projects' },
+    { href: '/#blog', label: 'Blog' },
+    { href: '/#skills', label: 'Skills' },
+    { href: '/#contact', label: 'Contact' },
   ]
 
   const handleNavClick = () => {
