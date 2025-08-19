@@ -1,11 +1,24 @@
+import { Github, Twitter, Linkedin } from 'lucide-react'
+
 export function Footer() {
   const currentYear = new Date().getFullYear()
   
   const socialLinks = [
-    { href: 'https://github.com/', label: 'GitHub' },
-    { href: 'https://linkedin.com/in/', label: 'LinkedIn' },
-    { href: 'https://twitter.com/', label: 'Twitter' },
-    { href: 'mailto:contact@example.com', label: 'Email' },
+    { 
+      href: 'https://github.com/serafinsanchez', 
+      label: 'GitHub',
+      icon: Github
+    },
+    { 
+      href: 'https://x.com/serafinsanchez_', 
+      label: 'X (Twitter)',
+      icon: Twitter
+    },
+    { 
+      href: 'https://www.linkedin.com/in/serafin-sanchez/', 
+      label: 'LinkedIn',
+      icon: Linkedin
+    },
   ]
 
   return (
@@ -17,18 +30,21 @@ export function Footer() {
           </div>
           
           <div className="flex space-x-6">
-            {socialLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
-                aria-label={`Visit my ${link.label} profile (opens in new tab)`}
-              >
-                {link.label}
-              </a>
-            ))}
+            {socialLinks.map((link) => {
+              const IconComponent = link.icon
+              return (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
+                  aria-label={`Visit my ${link.label} profile (opens in new tab)`}
+                >
+                  <IconComponent size={20} />
+                </a>
+              )
+            })}
           </div>
         </div>
       </div>
