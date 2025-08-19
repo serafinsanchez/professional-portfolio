@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation'
 // Type for project metadata from MDX files
 export type ProjectMeta = {
   title: string
+  slug?: string
   date?: string
   tags?: string[]
   excerpt?: string

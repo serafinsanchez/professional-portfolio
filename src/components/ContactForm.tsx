@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
+import { CheckCircle2, XCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
@@ -78,7 +79,7 @@ export function ContactForm({ className = '' }: ContactFormProps) {
             type="text"
             placeholder="Your name"
             {...register('name')}
-            className={errors.name ? 'border-red-500' : ''}
+            className={`min-h-[48px] ${errors.name ? 'border-red-500' : ''}`}
           />
           {errors.name && (
             <p className="text-sm text-red-500">{errors.name.message}</p>
@@ -94,7 +95,7 @@ export function ContactForm({ className = '' }: ContactFormProps) {
             type="email"
             placeholder="your@email.com"
             {...register('email')}
-            className={errors.email ? 'border-red-500' : ''}
+            className={`min-h-[48px] ${errors.email ? 'border-red-500' : ''}`}
           />
           {errors.email && (
             <p className="text-sm text-red-500">{errors.email.message}</p>
@@ -110,7 +111,7 @@ export function ContactForm({ className = '' }: ContactFormProps) {
             placeholder="Tell me about your project or just say hello!"
             rows={5}
             {...register('message')}
-            className={errors.message ? 'border-red-500' : ''}
+            className={`min-h-[120px] ${errors.message ? 'border-red-500' : ''}`}
           />
           {errors.message && (
             <p className="text-sm text-red-500">{errors.message.message}</p>
@@ -118,14 +119,38 @@ export function ContactForm({ className = '' }: ContactFormProps) {
         </div>
 
         {submitStatus === 'success' && (
-          <div className="rounded-md bg-green-50 p-3 text-sm text-green-700 dark:bg-green-900/20 dark:text-green-300">
-            Thank you! Your message has been sent successfully. I&apos;ll get back to you soon.
+          <div className="relative rounded-xl border bg-card text-card-foreground shadow-sm animate-in slide-in-from-top-2 duration-300">
+            <div className="flex items-start gap-3 p-4">
+              <div className="flex-shrink-0 mt-0.5">
+                <CheckCircle2 className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
+              </div>
+              <div className="space-y-1">
+                <p className="text-sm font-medium text-foreground">
+                  Message sent successfully! 🎉
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  Thank you for reaching out. I&apos;ll get back to you as soon as possible.
+                </p>
+              </div>
+            </div>
           </div>
         )}
 
         {submitStatus === 'error' && (
-          <div className="rounded-md bg-red-50 p-3 text-sm text-red-700 dark:bg-red-900/20 dark:text-red-300">
-            {errorMessage}
+          <div className="relative rounded-xl border bg-card text-card-foreground shadow-sm animate-in slide-in-from-top-2 duration-300">
+            <div className="flex items-start gap-3 p-4">
+              <div className="flex-shrink-0 mt-0.5">
+                <XCircle className="h-5 w-5 text-red-600 dark:text-red-400" />
+              </div>
+              <div className="space-y-1">
+                <p className="text-sm font-medium text-foreground">
+                  Unable to send message
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  {errorMessage}
+                </p>
+              </div>
+            </div>
           </div>
         )}
 

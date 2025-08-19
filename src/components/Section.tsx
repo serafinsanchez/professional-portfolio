@@ -13,13 +13,13 @@ export function Section({ children, className, title, id }: SectionProps) {
     <section
       id={id}
       className={cn(
-        "mx-auto w-full max-w-6xl px-6 py-16 md:py-24",
+        "mx-auto w-full max-w-6xl px-4 sm:px-6 py-12 sm:py-16 md:py-24",
         className
       )}
     >
       {title && (
-        <div className="mb-12">
-          <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+        <div className="mb-8 sm:mb-12">
+          <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl md:text-4xl">
             {title}
           </h2>
         </div>

@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { ExternalLink, Github } from "lucide-react"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -11,7 +12,25 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <Card className="group h-full transition-all duration-200 hover:shadow-lg">
+    <Card className="group h-full transition-all duration-200 hover:shadow-lg overflow-hidden">
+      {project.cover && (
+        <div className="relative h-48 w-full overflow-hidden">
+          <Link 
+            href={`/projects/${project.slug}`}
+            className="block h-full w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+            aria-label={`Learn more about ${project.title}`}
+          >
+            <Image
+              src={project.cover}
+              alt={`${project.title} preview`}
+              fill
+              className="object-cover transition-transform duration-300 group-hover:scale-105"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </Link>
+        </div>
+      )}
+      
       <CardHeader>
         <CardTitle className="group-hover:text-primary transition-colors">
           <Link 

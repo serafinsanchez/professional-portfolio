@@ -1,0 +1,177 @@
+export const meta = {
+  title: 'CleanerSpaces',
+  slug: 'cleanerspaces',
+  date: '2023-09-15',
+  tags: ['Next.js 14', 'React', 'TypeScript', 'PostgreSQL', 'Tailwind CSS'],
+  excerpt: 'A directory website to connect people with specialized cleaners in their area, featuring business search, ratings, and a responsive, accessible UI.',
+  stack: ['Next.js 14', 'React', 'TypeScript', 'Tailwind CSS', 'Radix UI', 'PostgreSQL', 'Leaflet.js', 'Node.js', 'REST API', 'Zod'],
+  repo: '',
+  demo: 'https://cleanerspaces.co',
+  cover: '/images/projects/cleaner-spaces.png'
+}
+
+# CleanerSpaces
+
+I developed a comprehensive cleaning service marketplace platform for Colorado, transforming how residents and businesses connect with local cleaning services. The application streamlines the process of finding, comparing, and booking verified cleaning professionals across multiple service categories, handling thousands of providers statewide with real-time availability and detailed business profiles.
+
+## Overview
+
+CleanerSpaces addresses the challenge of finding reliable, local cleaning services by creating a centralized platform where residents and businesses can discover, compare, and connect with verified cleaning professionals. The platform serves as a bridge between service providers and customers, creating a transparent, efficient marketplace for cleaning services across Colorado.
+
+![CleanerSpaces Business Profiles](/images/projects/cleaner-spaces-1.png)
+*Comprehensive business profiles with detailed service information, ratings, and contact details*
+
+## Key Features
+
+### 🔍 Advanced Search & Discovery
+- **Multi-Parameter Filtering:** Filter by service type, location, ratings, and availability
+- **Service Categories:** Comprehensive coverage of residential and commercial cleaning
+- **Geographic Search:** ZIP code and city-based provider matching with service area mapping
+- **Real-Time Availability:** Live updates on provider availability and booking status
+
+### 🏪 Comprehensive Business Profiles
+- **Detailed Provider Information:** Complete business profiles with services, pricing, and credentials
+- **Review & Rating System:** Customer feedback and rating aggregation
+- **Service History Tracking:** Track provider performance and customer satisfaction
+- **Gallery & Portfolio:** Visual showcases of cleaning work and before/after photos
+
+### 🗺️ Location-Based Services
+- **City-Based Routing:** Optimized local service provider matching
+- **Service Area Mapping:** Interactive coverage visualization with Leaflet.js
+- **ZIP Code Integration:** Precise location matching for service delivery
+- **Local SEO Optimization:** City and service-specific landing pages
+
+### 💰 Dynamic Pricing & Estimation
+- **Price Calculator:** Interactive cost estimation for various service types
+- **Service Comparison:** Side-by-side provider comparison with pricing transparency
+- **Flexible Service Options:** Residential, commercial, and specialized cleaning categories
+- **Custom Quote Requests:** Direct communication with providers for specialized needs
+
+## User Flow
+
+1. **Location Entry:** User enters ZIP code or selects city from dropdown
+2. **Service Selection:** Choose from residential, commercial, or specialized cleaning options
+3. **Provider Matching:** System filters available businesses based on location and service type
+4. **Compare & Review:** View detailed profiles, read reviews, and compare providers
+5. **Price Estimation:** Use dynamic calculator to estimate service costs
+6. **Provider Selection:** Select preferred cleaning service and initiate contact
+7. **Booking Process:** Connect directly with chosen provider for scheduling
+
+## Architecture & Backend
+
+### Full-Stack Framework
+- **Next.js 14** with TypeScript for comprehensive full-stack functionality
+- **App Router** for modern routing and server-side rendering optimization
+- **Server-Side Rendering (SSR)** optimized for SEO and performance
+- **Static Generation** for frequently accessed pages
+
+### Database & Data Management
+- **PostgreSQL** with optimized query structure for efficient business filtering
+- **Custom Geographic Processing:** Algorithms for service area mapping and ZIP code matching
+- **RESTful API Design:** Clean endpoint structure for business search and filtering
+- **Data Models:** Businesses, services, cities, reviews, and service areas with relationships
+
+### Frontend Architecture
+- **React** with modern hooks and context for state management
+- **TypeScript** throughout for type safety and maintainable code
+- **Tailwind CSS** for responsive, utility-first design system
+- **Radix UI** for accessible, customizable component library
+
+## Security Measures
+
+### Data Protection & Privacy
+- **Environment Variable Protection:** Secure handling of sensitive configuration data
+- **SQL Injection Prevention:** Parameterized queries and input validation
+- **API Security:** Rate limiting, request validation, and proper error handling
+- **Data Sanitization:** Input validation and sanitization on all user forms
+
+### Performance & Reliability
+- **Query Optimization:** Efficient database indexing and query structure
+- **Caching Strategy:** Strategic caching for frequently accessed data
+- **Error Handling:** Comprehensive error logging and graceful failure handling
+- **Monitoring:** Performance monitoring and uptime tracking
+
+## UI/UX Details
+
+### Modern, Responsive Design
+- **Mobile-First Approach:** Optimized experience across all device sizes
+- **Tailwind CSS** for consistent, professional styling
+- **Interactive Components:** Custom business cards, search filters, and comparison tools
+- **Loading States:** Smooth transitions and loading indicators for better UX
+
+### Accessibility & Usability
+- **Keyboard Navigation:** Full keyboard accessibility for all interactive elements
+- **Screen Reader Support:** Proper ARIA labels and semantic HTML structure
+- **High Contrast:** Accessible color schemes meeting WCAG guidelines
+- **Touch-Friendly:** Optimized for mobile and tablet interactions
+
+### Interactive Features
+- **Leaflet.js Integration:** Interactive maps for service area visualization
+- **Dynamic Search:** Real-time filtering and search result updates
+- **Comparison Tools:** Side-by-side provider comparison functionality
+- **Review System:** User-generated content with moderation capabilities
+
+## Technical Challenges Overcome
+
+### Geographic Search Implementation
+- **Complex Location Matching:** Efficient algorithms for ZIP code and city-based searches
+- **Service Area Calculations:** Real-time mapping of provider coverage areas
+- **Performance Optimization:** Fast query response times for location-based searches
+- **Data Accuracy:** Maintaining up-to-date geographic and business information
+
+### Dynamic Pricing System
+- **Complex Calculations:** Multi-variable pricing models for different service types
+- **Real-Time Updates:** Live pricing adjustments based on service selections
+- **User Experience:** Intuitive interface for price estimation and comparison
+- **Provider Integration:** Flexible pricing structure accommodating various business models
+
+### SEO & Discovery Optimization
+- **Dynamic Sitemap Generation:** Automated SEO optimization for search engines
+- **Local SEO:** City and service-specific landing pages for improved discoverability
+- **Meta Optimization:** Dynamic meta tags and structured data implementation
+- **Performance Optimization:** Fast loading times and Core Web Vitals optimization
+
+## Tech Stack Breakdown
+
+### Frontend Technologies
+- **Next.js 14** with App Router for modern React architecture
+- **React** with hooks and context for state management
+- **TypeScript** for type safety and developer experience
+- **Tailwind CSS** for responsive design and component styling
+- **Radix UI** for accessible, customizable UI components
+
+### Backend & Database
+- **Node.js** runtime with Next.js API routes
+- **PostgreSQL** for robust relational data management
+- **Vercel Postgres** for managed database hosting
+- **RESTful APIs** with proper HTTP methods and status codes
+
+### Development & Deployment
+- **Vercel** for seamless deployment and hosting
+- **ESLint** and **Prettier** for code quality and consistency
+- **Jest** for unit and integration testing
+- **GitHub** for version control and collaborative development
+
+## Impact and Results
+
+### Business Impact
+- **Market Transformation:** Revolutionized how Colorado residents find cleaning services
+- **Provider Empowerment:** Gave cleaning businesses centralized platform for customer acquisition
+- **Efficiency Gains:** Reduced customer research time from hours to minutes
+- **Transparency:** Created transparent marketplace with ratings and pricing visibility
+
+### User Benefits
+- **Time Savings:** Streamlined discovery process eliminates need for multiple phone calls
+- **Quality Assurance:** Review system ensures customers find reliable service providers
+- **Price Transparency:** Clear pricing information enables informed decision-making
+- **Local Focus:** Hyper-local approach connects customers with nearby providers
+
+### Technical Achievements
+- **Scalable Architecture:** Platform handles thousands of providers across Colorado
+- **Performance Excellence:** Fast search results and smooth user experience
+- **SEO Success:** High search engine visibility for local cleaning service queries
+- **Accessibility Compliance:** Fully accessible platform meeting modern web standards
+
+CleanerSpaces represents a successful intersection of modern web development, user-centered design, and local business empowerment, creating tangible value for both service providers and customers in the Colorado market.
+
+

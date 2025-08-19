@@ -64,6 +64,8 @@
 
   html {
     scroll-behavior: smooth;
+    /* Improve touch scrolling on iOS */
+    -webkit-overflow-scrolling: touch;
   }
 
   body {
@@ -92,6 +94,40 @@
   button:focus-visible {
     outline: none;
     box-shadow: 0 0 0 1px hsl(var(--ring));
+  }
+
+  /* Mobile optimizations */
+  @media (max-width: 768px) {
+    /* Prevent horizontal scrolling */
+    body {
+      overflow-x: hidden;
+    }
+    
+    /* Better tap targets */
+    button, a, input, select, textarea {
+      min-height: 44px;
+      min-width: 44px;
+    }
+    
+    /* Improve text readability on small screens */
+    body {
+      line-height: 1.6;
+    }
+  }
+
+  /* Prevent zoom on iOS form inputs */
+  @supports (-webkit-appearance: none) {
+    input[type="email"],
+    input[type="number"],
+    input[type="password"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="text"],
+    input[type="url"],
+    textarea,
+    select {
+      font-size: 16px !important;
+    }
   }
 }
 

@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { ChevronLeft } from 'lucide-react'
-import { getWorkExperience } from '@/lib/work'
+import { getWorkExperience, getAllWorkExperiences } from '@/lib/work'
 
 interface WorkPageProps {
   params: Promise<{
@@ -40,8 +40,8 @@ export default async function WorkPage({ params }: WorkPageProps) {
 
 // Generate static params for all work experiences
 export async function generateStaticParams() {
-  return [
-    { slug: 'acme' },
-    { slug: 'vercel' }
-  ]
+  const workExperiences = await getAllWorkExperiences()
+  return workExperiences.map((work) => ({
+    slug: work.slug
+  }))
 }

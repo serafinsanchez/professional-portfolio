@@ -4,10 +4,9 @@ import { Section, ProjectCard, BlogCard, HeroSection } from "@/components"
 import { Button } from "@/components/ui/button"
 import { getAllProjects } from "@/lib/projects"
 import { getRecentBlogPosts } from "@/lib/blog"
+import { getAllWorkExperiences } from "@/lib/work"
 import About from "@/content/about.mdx"
 import { meta as skillsMeta } from "@/content/skills.mdx"
-import { meta as acmeMeta } from "@/content/work/acme.mdx"
-import { meta as vercelMeta } from "@/content/work/vercel.mdx"
 
 // Lazy load below-the-fold components
 const WorkTimeline = dynamic(() => import("@/components/WorkTimeline").then(mod => ({ default: mod.WorkTimeline })), {
@@ -30,30 +29,49 @@ export default async function Home() {
   // Get recent blog posts
   const recentBlogPosts = await getRecentBlogPosts(3) // Show top 3 blog posts
   
-  // Transform work meta into timeline format
-  const workItems = [
-    {
-      company: "Acme Corp",
-      role: acmeMeta.role || "Senior Frontend Developer",
-      start: "2022-01-01",
-      end: "present",
-      summary: acmeMeta.excerpt,
-      slug: "acme",
-    },
-    {
-      company: "Vercel",
-      role: vercelMeta.role || "Frontend Engineer",
-      start: "2020-06-01",
-      end: "2021-12-01",
-      summary: vercelMeta.excerpt,
-      slug: "vercel",
+  // Get all work experiences and transform into timeline format
+  const allWorkExperiences = await getAllWorkExperiences()
+  
+  // Define end dates for each role
+  const endDates: Record<string, string> = {
+    'bamboo': '2024-12-01',
+    'ableton-head-community': '2023-10-01',
+    'ableton-senior-manager': '2021-06-01',
+    'ableton-manager': '2018-01-01',
+    'art-institute': '2016-05-01',
+    'regis-university': '2012-09-01',
+    'youth-on-record': '2014-05-01',
+  }
+  
+  // Define company logos
+  const companyLogos: Record<string, string> = {
+    'Bamboo': '/bamboo.png',
+    'Ableton': '/ableton.png',
+    'The Art Institute of Colorado': '/art-institute.png',
+    'Regis University': '/regis.png',
+    'Youth on Record': '/youthonrecord.png',
+  }
+  
+  const workItems = allWorkExperiences.map(work => {
+    // Extract company name from title (everything after "at ")
+    const companyMatch = work.title.match(/at (.+)$/)
+    const company = companyMatch ? companyMatch[1] : work.title
+    
+    return {
+      company,
+      role: work.role || "Role",
+      start: work.date || "",
+      end: endDates[work.slug] || "",
+      summary: work.excerpt || "",
+      slug: work.slug,
+      logoUrl: companyLogos[company],
     }
-  ]
+  })
 
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <Section className="flex min-h-screen items-center justify-center py-32">
+      <Section className="flex min-h-[80vh] sm:min-h-[90vh] lg:min-h-screen items-center justify-center py-16 sm:py-24 md:py-32">
         <HeroSection />
       </Section>
 

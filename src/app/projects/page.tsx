@@ -14,8 +14,8 @@ export default async function ProjectsPage() {
   const projects = await getAllProjects()
 
   return (
-    <main className="min-h-screen py-8">
-      <div className="container mx-auto max-w-6xl px-4">
+    <main className="min-h-screen py-4 sm:py-8">
+      <div className="container mx-auto max-w-6xl px-4 sm:px-6">
         {/* Header */}
         <header className="mb-8">
           <div className="flex items-center gap-4 mb-6">
@@ -28,10 +28,10 @@ export default async function ProjectsPage() {
           </div>
           
           <div className="space-y-4">
-            <h1 className="text-4xl font-bold tracking-tight text-foreground lg:text-5xl">
+            <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
               All Projects
             </h1>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-lg text-muted-foreground sm:text-xl">
               A collection of my work, experiments, and contributions. 
               {projects.length > 0 && ` Currently featuring ${projects.length} projects.`}
             </p>

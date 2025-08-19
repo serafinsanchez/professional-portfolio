@@ -1,0 +1,197 @@
+export const meta = {
+  title: 'Auction Scout',
+  slug: 'auction-scout',
+  date: '2023-11-20',
+  tags: ['React', 'Vite', 'Node.js', 'Express', 'OpenAI', 'AI'],
+  excerpt: 'A modern web app for browsing, analyzing, and making informed decisions about online auction events and items, featuring AI-powered value estimation and a responsive, animated UI.',
+  stack: ['React', 'Vite', 'Tailwind CSS', 'shadcn/ui', 'Node.js', 'Express', 'Axios', 'node-cron', 'OpenAI GPT-4o', 'Jest'],
+  repo: 'https://github.com/serafinsanchez/auction-scout',
+  demo: 'https://auction-scout-demo.vercel.app',
+  cover: '/images/projects/auction-scout.png'
+}
+
+# Auction Scout
+
+A modern web application designed for auction enthusiasts, bidders, and administrators who want a unified, real-time view of live auctions and items from multiple sources. The platform aggregates, normalizes, and presents auction data through a robust backend API, offers a responsive React frontend, and features AI-powered price estimation for any auction item, making it easy to browse, analyze, and value lots with confidence.
+
+## Project Overview
+
+Auction Scout empowers users to discover, analyze, and value auction items in real time by aggregating data from multiple sources and providing instant, AI-powered price estimates. It streamlines the auction browsing experience, supports informed bidding, and gives auction managers operational visibility and data export tools.
+
+![Auction Scout Interface](/images/projects/auction-scout-1.png)
+*Modern interface showing auction listings with advanced filtering and search capabilities*
+
+## Key Features
+
+### 🔍 Unified Auction Aggregation
+- **Multi-Source Data:** Scrapes and normalizes auction data from Dickensheet.com (extensible to more sources)
+- **Decoupled Architecture:** React frontend fetches all data from backend, never directly from third-party APIs
+- **Real-Time Updates:** Auction data refreshed every 10 minutes automatically
+- **Manual Refresh:** Admin-triggered data updates for immediate synchronization
+
+### 🤖 AI-Powered Price Estimation
+- **OpenAI GPT-4o Integration:** Expert-level price estimates using both images and descriptions
+- **Instant Valuation:** One-click price estimation for any auction item
+- **Detailed Analysis:** Comprehensive valuation reports with market context
+- **Batch Processing:** Support for multiple item estimation simultaneously
+- **Cost Optimization:** Intelligent caching to minimize API costs
+
+![AI Price Estimation](/images/projects/auction-scout-2.png)
+*AI-powered price estimation feature providing detailed valuation reports*
+
+### 📊 Rich Data Visualization
+- **Table & Card Views:** Multiple viewing options for auction items
+- **Image Carousels:** High-quality image browsing for detailed item inspection
+- **Advanced Filtering:** Multi-parameter search and filtering capabilities
+- **CSV Export:** Download auction data for offline analysis and record-keeping
+
+![Data Visualization](/images/projects/auction-scout-3.png)
+*Rich data visualization with image carousels and advanced filtering options*
+
+### ⚡ Performance & Reliability
+- **Scheduled Updates:** Automated data refresh using node-cron
+- **Health Monitoring:** Real-time system health and metrics endpoints
+- **Caching Strategy:** Dual-layer caching (in-memory and Redis) for optimal performance
+- **Error Handling:** Comprehensive error logging and user-friendly messages
+
+## User Flow
+
+1. **Browse Auctions:** User lands on homepage and sees list of active auctions, sortable and paginated
+2. **View Auction Details:** User clicks auction to view all items with images, descriptions, and bid status
+3. **Analyze Items:** User views detailed item information, scrolls through images, and reviews bidding history
+4. **Get AI Price Estimate:** User requests AI-powered price estimate with detailed valuation and market context
+5. **Export Data:** User exports auction items to CSV for further analysis
+6. **(Admin) System Management:** Admin triggers manual refresh or checks system health via dedicated endpoints
+
+## Architecture & Backend
+
+### Backend Infrastructure
+- **Node.js with Express** for robust API server architecture
+- **Cheerio** for reliable HTML scraping and data extraction
+- **Axios** for HTTP requests with retry logic and rate limiting
+- **Luxon** for advanced date parsing and manipulation
+- **node-cron** for scheduled data refresh operations
+
+### Frontend Architecture
+- **React with Vite** for fast development and optimized builds
+- **Tailwind CSS** for responsive, utility-first styling
+- **shadcn/ui** for consistent, accessible component library
+- **lucide-react** for modern, professional icons
+- **Custom Hooks** for state management and API interactions
+
+### Data Management
+- **In-Memory Storage** as default with Redis support for persistence
+- **Dual-Layer Caching** for AI estimation results to optimize costs and performance
+- **RESTful API Design** with clear endpoints for auctions, items, health, and metrics
+- **Extensible Architecture** for adding new auction sources
+
+## Security Measures
+
+### API Security
+- **CORS Configuration:** Restricted to known frontend ports for development security
+- **Input Validation:** Comprehensive validation on all API endpoints
+- **Rate Limiting:** Protection against API abuse and excessive requests
+- **Error Handling:** Secure error messages that don't expose system internals
+
+### Data Protection
+- **No Sensitive Data Storage:** No user authentication or personal information handling
+- **Environment Variables:** Secure API key management for external services
+- **Sanitized Outputs:** Clean, validated data responses to frontend
+- **Request Validation:** Type checking and sanitization on all incoming requests
+
+## UI/UX Details
+
+### Modern React Interface
+- **Responsive Design:** Mobile-first approach with desktop optimization
+- **Smooth Animations:** Fade-in effects and animated transitions for enhanced UX
+- **Loading States:** Clear feedback during data fetching and AI processing
+- **Error Boundaries:** Graceful error handling with user-friendly messages
+
+### Advanced Features
+- **Image Carousels:** Intuitive navigation through multiple item photos
+- **Table/Card Toggle:** Flexible viewing options based on user preference
+- **Export Functionality:** One-click CSV export with proper file naming
+- **Real-Time Feedback:** Live updates during AI estimation and data refresh
+
+### Accessibility & Performance
+- **Keyboard Navigation:** Full accessibility for keyboard-only users
+- **ARIA Labels:** Proper semantic markup for screen readers
+- **Color Contrast:** WCAG compliant color schemes
+- **Performance Optimization:** Lazy loading, code splitting, and efficient rendering
+
+## Technical Challenges Overcome
+
+### Resilient Web Scraping
+- **Robust Error Handling:** Built comprehensive retry logic for unreliable third-party sites
+- **Rate Limiting:** Implemented respectful scraping practices to avoid blocking
+- **Data Normalization:** Created unified data models from disparate auction sources
+- **Change Detection:** Built systems to handle website structure changes gracefully
+
+### AI Integration Excellence
+- **Prompt Engineering:** Developed sophisticated prompts for accurate price estimation
+- **Cost Optimization:** Implemented intelligent caching to minimize OpenAI API costs
+- **Context Awareness:** Leveraged both visual and textual information for accurate valuations
+- **Batch Processing:** Enabled efficient processing of multiple items simultaneously
+
+### Performance Optimization
+- **Caching Strategy:** Dual-layer caching system for optimal response times
+- **Frontend Decoupling:** Ensured frontend never directly calls third-party APIs
+- **Database Design:** Efficient in-memory storage with optional Redis persistence
+- **API Design:** RESTful endpoints optimized for frontend consumption
+
+### Testing & Quality
+- **Comprehensive Testing:** Jest and Supertest coverage for all backend endpoints
+- **Cache Testing:** Specific tests for hit/miss scenarios and data integrity
+- **API Reliability:** Robust error handling and logging throughout the system
+- **Performance Monitoring:** Built-in health checks and metrics collection
+
+## Tech Stack Breakdown
+
+### Frontend Technologies
+- **React** with modern hooks and functional components
+- **Vite** for fast development and optimized production builds
+- **Tailwind CSS** for responsive, utility-first styling
+- **shadcn/ui** for accessible, customizable UI components
+- **lucide-react** for consistent iconography
+
+### Backend Technologies
+- **Node.js** with Express framework
+- **Cheerio** for HTML parsing and data extraction
+- **Axios** for HTTP client with advanced features
+- **node-cron** for scheduled task management
+- **Luxon** for date/time manipulation
+
+### AI & External Services
+- **OpenAI GPT-4o** for AI-powered price estimation
+- **Redis** (optional) for persistent caching
+- **Third-party APIs** with robust error handling
+
+### Development & Testing
+- **Jest** for unit testing backend logic
+- **Supertest** for API endpoint testing
+- **ESLint** and **Prettier** for code quality
+- **GitHub** for version control and collaboration
+
+## Impact and Results
+
+### User Empowerment
+- **Informed Bidding:** AI-powered valuations help users make confident bidding decisions
+- **Time Savings:** Unified platform eliminates need to visit multiple auction sites
+- **Data Access:** CSV export enables detailed offline analysis and record-keeping
+- **Real-Time Information:** Always up-to-date auction data and item details
+
+### Technical Innovation
+- **Scalable Architecture:** Extensible design ready for additional auction sources
+- **Cost-Effective AI:** Intelligent caching minimizes API costs while maintaining functionality
+- **Reliable Scraping:** Robust data collection resistant to third-party site changes
+- **Modern Stack:** Cutting-edge technologies ensuring long-term maintainability
+
+### Business Value
+- **Market Analysis:** Provides valuable insights into auction market trends
+- **Investment Tool:** Helps collectors and investors make informed purchasing decisions
+- **Administrative Efficiency:** Streamlined data management for auction administrators
+- **Competitive Advantage:** AI-powered features differentiate from traditional auction browsers
+
+Auction Scout represents a successful fusion of modern web development, AI integration, and practical business utility, creating a valuable tool for the auction community while demonstrating advanced technical capabilities.
+
+

@@ -1,0 +1,157 @@
+export const meta = {
+  title: 'MagicMiro',
+  slug: 'magicmiro',
+  date: '2024-02-20',
+  tags: ['Swift', 'SwiftUI', 'AppKit', 'macOS', 'Productivity'],
+  excerpt: 'A native macOS menu bar app for instantly converting copied text into Miro sticky notes, streamlining workshops and brainstorming.',
+  stack: ['Swift', 'SwiftUI', 'AppKit', 'HotKey'],
+  repo: '',
+  demo: 'https://apps.apple.com/us/app/magicmiro/id6740998074?mt=12',
+  cover: '/images/projects/magicmiro.png'
+}
+
+# MagicMiro
+
+A native macOS menu bar application designed for power users of Miro, the collaborative whiteboard platform. It streamlines the process of converting any copied text into multiple Miro sticky notes, enabling users to instantly paste formatted content into Miro using a single keyboard shortcut. The app runs silently in the background, providing a seamless, productivity-boosting experience for workshop facilitators, designers, and anyone who frequently organizes ideas in Miro.
+
+## Project Overview
+
+MagicMiro addresses the tedious manual process of creating multiple sticky notes in Miro from raw text. By automating the conversion and leveraging Miro's spreadsheet import functionality, it saves users significant time and reduces friction in workshops, brainstorming sessions, and collaborative meetings.
+
+## Key Features
+
+### ⚡ Global Keyboard Shortcut
+- Instantly convert clipboard text to Miro sticky notes with a user-defined shortcut
+- Managed via HotKey library for robust shortcut handling
+- User-configurable shortcuts with persistence across app launches
+
+### 📋 Clipboard Conversion
+- Reads plain text from clipboard and splits it into individual lines
+- Generates Miro-compatible HTML table with Google Sheets markers
+- Includes analytics metadata for seamless Miro integration
+- Outputs both HTML and plain text for maximum compatibility
+
+### 🎯 Menu Bar Integration
+- Minimalist menu bar icon with quick access to preferences
+- Visual feedback with animated success (checkmark) or error (exclamation) indicators
+- Shortcut display and quit options directly from menu bar
+- Runs as background utility (LSUIElement) for non-intrusive operation
+
+### ⚙️ Preferences & Settings
+- Configure or reset global shortcuts through intuitive interface
+- Toggle launch at login for automatic startup
+- View current settings and shortcut assignments
+- Accessibility permission handling with user guidance
+
+### 🛡️ Robust Error Handling
+- Detects empty/non-text clipboard content
+- Checks for required macOS permissions
+- Handles conversion failures with clear user feedback
+- Extensive debug logging for troubleshooting
+
+## User Flow
+
+1. **Launch App:** User starts MagicMiro; it appears as a menu bar icon
+2. **Set Shortcut:** User configures their preferred global shortcut in Preferences
+3. **Copy Text:** User copies any text (meeting notes, brainstorm list, etc.)
+4. **Trigger Conversion:** User presses the shortcut; MagicMiro processes the clipboard
+5. **Paste in Miro:** User switches to Miro and pastes (Cmd+V); Miro's "Create Multiple Stickies" dialog appears
+6. **Feedback:** Menu bar icon shows visual confirmation or error indication
+7. **Adjust Settings:** User can update shortcuts, toggle auto-launch, or quit via menu bar
+
+## Architecture and Backend Design
+
+### Native macOS Development
+- **Swift** for core application logic and system integration
+- **SwiftUI** for modern, responsive settings and preferences UI
+- **AppKit** for menu bar integration and system dialogs
+- **No Backend Required:** All processing is local; no user data leaves the device
+
+### Data Management
+- **UserDefaults** for persistent storage of shortcuts and user preferences
+- **HotKey Library** for global shortcut management and registration
+- **In-Memory Processing:** All clipboard operations handled locally
+
+### Security & Permissions
+- **macOS Accessibility Permissions:** Required for global shortcut functionality
+- **User Guidance System:** Automated detection and user guidance for permission setup
+- **Direct System Preferences Links:** Streamlined permission enablement process
+
+## Technical Challenges Overcome
+
+### Clipboard Format Handling
+- Precisely replicated Miro's expected spreadsheet HTML structure
+- Generated proper analytics JSON metadata for flawless sticky note creation
+- Ensured both HTML and plain text clipboard compatibility
+
+### Global Shortcut Management
+- Integrated HotKey library for robust, cross-application shortcut handling
+- Implemented shortcut persistence and conflict detection
+- Created user-friendly shortcut recording and reset functionality
+
+### Permission Flow Automation
+- Automated detection of macOS Accessibility permissions
+- Provided clear user guidance with direct links to System Preferences
+- Handled permission denial scenarios with informative error messages
+
+### System Integration
+- Implemented proper menu bar utility behavior (LSUIElement)
+- Created dynamic menu bar icon feedback system
+- Ensured seamless integration with macOS design patterns
+
+## UI/UX Details
+
+### SwiftUI Modern Interface
+- Clean, intuitive preferences window with shortcut recording
+- Real-time feedback for shortcut conflicts and validation
+- Consistent with macOS design guidelines and accessibility standards
+
+### Menu Bar Experience
+- Custom "M" icon with dynamic visual states
+- Minimal disruption to user workflow
+- Quick access to all essential functions
+
+### User Feedback Systems
+- Visual feedback through menu bar icon animations
+- Dialog-based error reporting for critical issues
+- Clear success/error states for all user actions
+
+## Tech Stack Breakdown
+
+### Frontend/UI
+- **SwiftUI** for settings interface and user preferences
+- **AppKit** for menu bar integration and system dialogs
+- **Custom UI Components** for shortcut recording and feedback
+
+### Core Logic
+- **Swift** for clipboard processing, conversion logic, and shortcut management
+- **HotKey** third-party library for global keyboard shortcut handling
+- **Foundation** frameworks for system integration
+
+### Distribution
+- **Mac App Store** distribution with proper sandboxing
+- **No Network Dependencies:** 100% local processing
+- **Universal Binary** support for Intel and Apple Silicon
+
+## Impact and Problem Solved
+
+MagicMiro eliminates the tedious manual process of creating multiple sticky notes in Miro from raw text. By automating the conversion and leveraging Miro's spreadsheet import capabilities, it provides:
+
+**Time Savings:**
+- Reduces multi-step manual processes to a single keyboard shortcut
+- Eliminates repetitive copy-paste operations for multiple sticky notes
+- Streamlines workshop preparation and brainstorming sessions
+
+**User Experience:**
+- Seamless integration with existing Miro workflows
+- Non-intrusive background operation
+- Consistent, reliable performance across macOS versions
+
+**Professional Impact:**
+- Enhances productivity for workshop facilitators and design teams
+- Reduces friction in collaborative brainstorming sessions
+- Improves meeting efficiency and idea organization
+
+The app has been well-received by Miro power users and has garnered positive reviews on the Mac App Store for its simplicity and effectiveness.
+
+

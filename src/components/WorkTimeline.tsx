@@ -21,7 +21,7 @@ export function WorkTimeline({ items }: WorkTimelineProps) {
   return (
     <div className="relative">
       {/* Vertical line */}
-      <div className="absolute left-4 top-6 bottom-0 w-0.5 bg-border md:left-6" />
+      <div className="absolute left-5 top-8 bottom-0 w-0.5 bg-border md:left-6" />
       
       <div className="space-y-8">
         {items.map((item, index) => {
@@ -93,8 +93,8 @@ export function WorkTimeline({ items }: WorkTimelineProps) {
           return (
             <div key={index} className="relative flex gap-6 md:gap-8">
               {/* Timeline dot */}
-              <div className="relative flex h-8 w-8 shrink-0 items-center justify-center md:h-12 md:w-12">
-                <div className="h-3 w-3 rounded-full bg-primary ring-4 ring-background md:h-4 md:w-4" />
+              <div className="relative flex h-10 w-10 shrink-0 items-center justify-center md:h-12 md:w-12">
+                <div className="h-4 w-4 rounded-full bg-primary ring-4 ring-background md:h-5 md:w-5" />
               </div>
               
               {/* Content */}

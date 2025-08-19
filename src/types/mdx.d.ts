@@ -2,6 +2,7 @@ declare module '*.mdx' {
   let MDXComponent: (props: any) => JSX.Element
   export const meta: {
     title: string
+    slug?: string
     date?: string
     tags?: string[]
     excerpt?: string

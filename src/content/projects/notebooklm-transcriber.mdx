@@ -1,0 +1,188 @@
+export const meta = {
+  title: 'NotebookLM Multi-Language Transcriber',
+  slug: 'notebooklm-transcriber',
+  date: '2024-01-10',
+  tags: ['Python', 'Streamlit', 'AssemblyAI', 'Google Cloud Translate', 'AI'],
+  excerpt: 'A web app for fast, accurate multi-language audio transcription and translation, featuring speaker diarization, custom speaker naming, and instant subtitle export.',
+  stack: ['Python', 'Streamlit', 'AssemblyAI API', 'Google Cloud Translate API', 'python-dotenv', 'Secure Temporary File Handling'],
+  repo: 'https://github.com/serafinsanchez/notebooklm-transcribe',
+  demo: '',
+  cover: '/images/projects/notebooklm-transcriber.gif'
+}
+
+# NotebookLM Multi-Language Transcriber
+
+I built NotebookLM Multi-Language Transcriber to make audio transcription and translation accessible to a global audience. Designed for users who need accurate, multi-speaker transcriptions in a variety of languages, my app streamlines the process of converting audio files into readable, downloadable text and subtitle formats, with optional translation to any language supported by Google Translate.
+
+## Project Overview
+
+This project democratizes access to high-quality, multi-language transcription and translation, empowering users worldwide to convert audio into actionable text and subtitles. It is especially valuable for researchers, journalists, educators, and global teams who need fast, accurate, and language-inclusive transcription without technical barriers or complex setup.
+
+## Key Features
+
+### 🎙️ Audio Upload & Transcription
+- Upload audio files in multiple formats (mp3, wav, ogg)
+- Instant transcription with high accuracy
+- Support for 20+ languages with selectable dropdown interface
+- Secure temporary file handling with automatic cleanup
+
+### 👥 Speaker Diarization
+- Automatically detects and labels different speakers in audio
+- Custom speaker naming for personalized transcripts
+- Clear speaker separation in final transcripts
+- Handles multi-speaker conversations and interviews
+
+### 🌍 Multi-Language Support
+- Transcription available in 20+ languages
+- User-friendly language selection dropdown
+- Instant translation to any Google Translate-supported language
+- Side-by-side display of original and translated text
+
+### 📄 Multiple Export Formats
+- Download transcripts in TXT format
+- Export subtitles in SRT and VTT formats
+- Translated versions available for all formats
+- Instant download with proper file naming
+
+### 🔄 Session Management
+- Clean session state management
+- Start new sessions seamlessly
+- View both sample and full transcripts
+- No login required for frictionless experience
+
+## User Flow
+
+1. **Upload Audio:** User selects and uploads an audio file through drag-and-drop interface
+2. **Select Source Language:** User chooses the language spoken in the audio from dropdown
+3. **Transcription:** The app transcribes the audio, displaying a sample of the result
+4. **Speaker Naming:** User optionally assigns custom names to detected speakers
+5. **View Full Transcript:** User generates and reviews the complete transcript
+6. **Translate (Optional):** User selects a target language and translates the transcript
+7. **Download:** User downloads transcript and/or subtitles in preferred formats
+8. **Session Reset:** User can start a new session at any time
+
+## Architecture and Backend Design
+
+### Streamlit Web Framework
+- **Streamlit** for rapid, interactive web interface development
+- **Python Backend** leveraging AssemblyAI and Google Cloud Translate APIs
+- **Session State Management** for maintaining user data and UI state
+- **Modular Functions** for transcription, translation, and file generation
+
+### API Integration
+- **AssemblyAI API** for high-quality multi-language transcription
+- **Google Cloud Translate API** for comprehensive translation support
+- **Secure API Key Management** using python-dotenv
+- **Rate Limiting and Error Handling** for robust API interactions
+
+### Data Processing
+- **No Database Required:** All data processed in-memory for privacy
+- **Temporary File Handling:** Secure upload and processing of audio files
+- **Dynamic File Generation:** On-the-fly creation of downloadable files
+- **Multi-Format Support:** Handles various audio input and output formats
+
+## Security Measures
+
+### Data Privacy & Protection
+- **No Persistent Storage:** All user data and audio files are processed transiently
+- **Secure API Key Management:** All API keys loaded from environment variables
+- **Temporary File Cleanup:** Automatic deletion of uploaded files after processing
+- **No User Accounts:** Privacy-first approach with no authentication required
+
+### Compliance & Best Practices
+- **International Data Protection Standards:** Documentation emphasizes compliance requirements
+- **Local Processing:** Transcription metadata processed locally where possible
+- **Secure File Handling:** Industry-standard temporary file management
+- **API Security:** Proper error handling and secure API communication
+
+## Technical Challenges Overcome
+
+### Multi-Language Integration
+- Seamlessly combined AssemblyAI's multi-language transcription with Google Translate
+- Created unified language selection interface supporting both services
+- Handled language code mapping between different API systems
+- Optimized API calls to minimize latency and costs
+
+### Speaker Diarization Implementation
+- Robust speaker detection and labeling system
+- Custom speaker naming with persistent state management
+- Clear visual separation of speakers in transcript output
+- Handled edge cases with single-speaker or unclear speaker audio
+
+### Efficient State Management
+- Leveraged Streamlit's session state for smooth user experience
+- Maintained conversation state across different app sections
+- Implemented clean session reset functionality
+- Optimized memory usage for large audio files
+
+### Dynamic File Generation
+- Created downloadable files on-the-fly without server storage
+- Generated multiple format types (TXT, SRT, VTT) from single transcription
+- Implemented proper file naming conventions with timestamps
+- Handled both original and translated content generation
+
+## UI/UX Details
+
+### Streamlit Modern Interface
+- Clean, intuitive workflow with clear step-by-step process
+- Responsive design working across desktop and mobile devices
+- Real-time processing indicators and progress feedback
+- Large, readable text areas for transcript review
+
+### User Experience Design
+- Drag-and-drop file upload with visual feedback
+- Clear separation between original and translated content
+- Prominent download buttons for all output formats
+- Spinner indicators for processing states
+
+### Accessibility Features
+- High contrast text for improved readability
+- Keyboard navigation support
+- Clear error messages and user guidance
+- Mobile-responsive design for on-the-go use
+
+## Tech Stack Breakdown
+
+### Frontend/Interface
+- **Streamlit** for rapid web app development and deployment
+- **Python** for all application logic and data processing
+- **Custom CSS** for enhanced styling and user experience
+
+### Backend/APIs
+- **AssemblyAI** for advanced audio transcription with speaker diarization
+- **Google Cloud Translate** for comprehensive translation services
+- **python-dotenv** for secure environment variable management
+- **Temporary File Libraries** for secure file handling
+
+### Development Tools
+- **Requirements.txt** for dependency management
+- **Local Environment Setup** for development and testing
+- **Manual Testing** workflows for quality assurance
+- **Documentation** for setup and usage instructions
+
+## Impact and Problem Solved
+
+### Global Accessibility
+- Makes professional transcription accessible to users worldwide
+- Removes language barriers for international content creators
+- Enables accurate transcription without expensive software or subscriptions
+
+### Professional Applications
+- **Researchers:** Convert interviews and focus groups into analyzable text
+- **Journalists:** Transcribe interviews and press conferences with speaker identification
+- **Educators:** Create accessible content from lectures and presentations  
+- **Global Teams:** Bridge language gaps in international communications
+
+### Technical Innovation
+- **No-Code Solution:** Technical transcription made accessible to non-technical users
+- **Privacy-First Design:** No user data storage or account requirements
+- **Multi-Format Output:** Comprehensive export options for various use cases
+- **Real-Time Processing:** Fast transcription and translation workflows
+
+**Key Results:**
+- Fast, accurate multi-language transcription without technical setup
+- Speaker diarization with custom naming for professional use cases
+- Instant translation expanding content accessibility globally
+- Multiple export formats supporting diverse professional workflows
+
+

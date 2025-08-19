@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowLeft, ExternalLink, Github } from 'lucide-react'
 import { notFound } from 'next/navigation'
 import { getAllProjects, getProject } from '@/lib/projects'
@@ -137,6 +138,20 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             )}
           </div>
         </header>
+        
+        {/* Hero Image */}
+        {meta.cover && (
+          <div className="relative w-full h-64 md:h-80 lg:h-96 mb-8 rounded-lg overflow-hidden">
+            <Image
+              src={meta.cover}
+              alt={`${meta.title} preview`}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+              priority
+            />
+          </div>
+        )}
         
         {/* Content */}
         <div className="prose prose-lg max-w-none dark:prose-invert">

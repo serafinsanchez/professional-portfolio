@@ -45,6 +45,12 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    // Log the email attempt
+    console.log(`Attempting to send email from ${name} (${email})`)
+    console.log(`From: Portfolio <serafin@serafin.ai>`)
+    console.log(`To: ${process.env.CONTACT_TO}`)
+    console.log(`Subject: New portfolio message from ${name}`)
+
     // Send email using Resend
     const { data, error } = await resend.emails.send({
       from: 'Portfolio <serafin@serafin.ai>',
@@ -66,15 +72,19 @@ This message was sent from your portfolio contact form.
     })
 
     if (error) {
-      console.error('Resend error:', error)
+      console.error('Resend API error:', JSON.stringify(error, null, 2))
+      console.error('Error type:', typeof error)
+      console.error('Error message:', error.message || 'No error message')
       return NextResponse.json(
         { ok: false, error: 'Failed to send email. Please try again.' },
         { status: 500 }
       )
     }
 
-    console.log('Email sent successfully:', data?.id)
-    return NextResponse.json({ ok: true })
+    console.log('✅ Email sent successfully!')
+    console.log('Email ID:', data?.id)
+    console.log('Email data:', JSON.stringify(data, null, 2))
+    return NextResponse.json({ ok: true, emailId: data?.id })
 
   } catch (error) {
     console.error('Contact form error:', error)
