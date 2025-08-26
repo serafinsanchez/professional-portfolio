@@ -13,7 +13,7 @@ export function HeroSection() {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <h1 className="text-4xl font-serif font-normal tracking-tight text-foreground sm:text-5xl md:text-7xl lg:text-8xl">
-          hi, I&apos;m Serafin 👋🏽
+          hi, I&apos;m Serafin 👋🏽 🎷
         </h1>
       </motion.div>
       
@@ -23,7 +23,7 @@ export function HeroSection() {
         transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
       >
         <p className="mt-6 text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8 md:text-xl lg:text-2xl">
-          Full-stack AI-native developer solving problems and exploring creativity through code.
+          Full-stack AI-native developer building solutions and exploring creativity through code.
         </p>
       </motion.div>
 
