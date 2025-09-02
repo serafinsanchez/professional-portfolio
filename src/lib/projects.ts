@@ -7,6 +7,7 @@ export type ProjectMeta = {
   title: string
   slug?: string
   date?: string
+  order?: number
   tags?: string[]
   excerpt?: string
   stack?: string[]
@@ -53,10 +54,22 @@ export async function getAllProjects(): Promise<ProjectListItem[]> {
       })
     )
     
-    // Filter out failed imports and sort by date (newest first)
+    // Filter out failed imports and sort by order first, then by date (newest first)
     return projects
       .filter((project): project is ProjectListItem => project !== null)
       .sort((a, b) => {
+        // If both have order, sort by order (lower number = higher priority)
+        if (a.order !== undefined && b.order !== undefined) {
+          return a.order - b.order
+        }
+        // If only one has order, prioritize it
+        if (a.order !== undefined && b.order === undefined) {
+          return -1
+        }
+        if (a.order === undefined && b.order !== undefined) {
+          return 1
+        }
+        // If neither has order, sort by date (newest first)
         if (!a.date || !b.date) return 0
         return new Date(b.date).getTime() - new Date(a.date).getTime()
       })
