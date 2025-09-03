@@ -1,0 +1,150 @@
+export const meta = {
+  title: "Version Control For Vibecoders: Make Mistakes Safely",
+  date: "2025-09-03",
+  tags: ["git", "version-control", "beginner", "workflow", "ai-development"],
+  excerpt: "Learn how version control acts like a time machine for your projects, letting you experiment boldly with AI assistance while always having a safe way back.",
+  author: "Serafin Sanchez",
+  readTime: "8 min read"
+}
+
+# Version Control For Vibecoders: Make Mistakes Safely
+
+Version control is like Google Docs history for any project. It lets you save checkpoints, compare changes, and go back when something breaks. GitHub is the shared cloud folder where your versions live so you can collaborate, back up work, and ship confidently.
+
+## What You'll Learn
+
+- How version control acts as a safety net when working with AI tools
+- The essential Git workflow that takes 10 minutes to master
+- How to write commit messages that your future self will thank you for
+- A daily checklist to keep your projects organized and backed up
+
+## Why This Matters If You Build With AI
+
+<div className="callout note">
+**Note**: This guide assumes you're comfortable using web interfaces and basic file management. No coding experience required!
+</div>
+
+- **AI moves fast; you need brakes.** When an AI suggestion goes wrong, version control lets you undo without drama.
+- **You work in experiments.** Save safe checkpoints so you can try bold ideas without risking your main work.
+- **You collaborate with humans and AIs.** Clear version history helps everyone understand what changed and why.
+
+## Plain-English Glossary You Will Actually Use
+
+- **Repository**: Your project folder in the cloud. Like a Google Drive folder dedicated to one project.
+- **Commit**: A saved checkpoint with a short message. Like "Save As" with a note to your future self.
+- **History**: A timeline of all your commits. Like the "Version History" panel in Google Docs.
+- **Push**: Send your latest changes up to GitHub. Like uploading your updated file.
+- **Pull**: Get the latest changes from GitHub. Like downloading the newest version from the shared folder.
+
+## Your First 10-Minute Workflow (No Coding)
+
+Let's walk through creating your first repository and making some changes.
+
+### Step 1: Create a GitHub Account
+
+Go to [https://github.com](https://github.com) and sign up. It's free and takes about 2 minutes.
+
+### Step 2: Make Your First Repository
+
+- Click your avatar → Your repositories → New
+- Name it something simple, for example: `my-ai-project-notes`
+- Choose Public or Private. If unsure, choose Private
+- Check "Add a README file." Click Create
+
+<div className="callout tip">
+**Pro Tip**: Start with descriptive repository names. `my-website` is better than `project1`, and `recipe-app-v2` is even better.
+</div>
+
+### Step 3: Upload Your First File
+
+- In your new repo, click Add file → Upload files
+- Drag in a simple document, for example `idea-notes.md` or `plan.docx`
+- Scroll down and add a short message in the box labeled "Commit changes." Example: `Add initial notes`
+- Click Commit changes
+
+### Step 4: Make Your First Versioned Edit
+
+- Click your uploaded file to open it
+- Choose Edit this file
+- Make a small change. Example: add a heading or fix a typo
+- Below, write a short message. Example: `Fix typos and add intro section`
+- Click Commit changes
+
+### Step 5: See Your History
+
+- Click the `<> Code` tab. Then click the clock icon labeled "History"
+- You'll see your commits as a timeline. Click any one to see what changed
+- You now have a time machine for your project
+
+## Clean Commit Messages That Future-You Will Love
+
+Use this tiny template every time you save a checkpoint:
+
+```text
+Short summary in plain language
+
+Why: 1 sentence on why this change was needed
+Scope: Which file(s) or area it touches
+Outcome: What user or you can do now that you could not before
+```
+
+### Examples You Can Copy and Tweak
+
+- `Add outline for blog series`
+- `Refactor intro section for clarity`  
+- `Fix broken links in resources list`
+- `Update README with setup steps`
+
+<div className="callout warning">
+**Watch Out**: Avoid vague messages like "updates" or "fixes". Your future self won't remember what you fixed!
+</div>
+
+## AI-Friendly Workflow You Can Repeat Daily
+
+- **Before you ask AI for changes**: Make sure your repo is up to date on GitHub. If you edited locally, upload or use GitHub Desktop to push.
+- **After AI suggests edits**: Review quickly, accept changes you understand, then save a commit with a helpful message.
+- **When something breaks**: Open History, pick the last good commit, and use the UI to revert or manually restore.
+
+## Safety First: What Not To Upload
+
+<div className="callout warning">
+**Never upload secrets** like API keys or passwords. If you have a `.env` or "keys.txt" file, do not drag it into GitHub.
+</div>
+
+If a tool created a `.env` file, add a note to your README that secrets live only on your computer or your hosting dashboard, not in the repo.
+
+
+## Troubleshooting: Common First-Day Bumps
+
+- **I don't see my file.** Refresh the page. Make sure you clicked Commit changes after uploading.
+- **I can't upload a large file.** GitHub has size limits. Store giant assets in cloud storage and link to them.
+- **I made a mistake.** Go to History, open the last commit that looked good, and copy the correct content back, or use the Revert option if available.
+
+## Printable: 60-Second Daily Checklist
+
+- Open your repo and click History. Skim the last 2 commits.
+- Review any in-progress files you plan to edit today.
+- Make a small plan in the README: 2 to 3 bullet points for today.
+- When you finish a change, commit with a helpful message.
+- Push your changes so they're safely stored on GitHub.
+
+## Safe Experiments With A Copy
+
+If you're about to try something risky, make a copy of your document in your local editor named `experiment-<date>` and upload it separately with a clear commit message. In the next post, we'll do this the professional way using branches so experiments are even safer and easier to merge back.
+
+## Key Takeaways
+
+- Version control is your safety net when experimenting with AI assistance
+- Good commit messages are love letters to your future self
+- Start with the GitHub web interface - it's more approachable than command line tools
+- Daily commits keep your work safe and your progress visible
+
+## What's Next?
+
+Your next step: Open your repository and make one small, useful change right now. Commit it with a clear message using the template above. Celebrate the win - you just gained a time machine for your work.
+
+Coming up next: We'll use **branches** to create safe sandboxes for experiments, then open **pull requests** to review and merge improvements without breaking your main work. The result: faster progress, fewer headaches, and cleaner collaboration.
+
+---
+
+*Questions about version control or AI-assisted development? [Get in touch](/#contact) - I'd love to help you build more confidently!*

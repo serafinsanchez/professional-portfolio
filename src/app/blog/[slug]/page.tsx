@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation'
 import { getAllBlogPosts, getBlogPost } from '@/lib/blog'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
+import { TableOfContents, ShareButtons, ReadingProgress } from '@/components'
 
 // Static params generation for build time
 export async function generateStaticParams() {
@@ -67,6 +68,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
   
   const { Component, meta } = post
+  const allPosts = await getAllBlogPosts()
+  const currentIndex = allPosts.findIndex(p => p.slug === slug)
+  const prevPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null
+  const nextPost = currentIndex > 0 ? allPosts[currentIndex - 1] : null
 
   const formattedDate = new Date(meta.date).toLocaleDateString('en-US', {
     year: 'numeric',
@@ -76,7 +81,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   return (
     <main className="min-h-screen py-8">
-      <article className="container mx-auto max-w-4xl px-4">
+      <ReadingProgress />
+      <article className="container mx-auto max-w-6xl px-4">
         {/* Header */}
         <header className="mb-8">
           <div className="flex items-center gap-4 mb-6">
@@ -127,28 +133,61 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 ))}
               </div>
             )}
+
+            <div className="pt-2">
+              <ShareButtons title={meta.title} description={meta.excerpt || ''} />
+            </div>
           </div>
         </header>
         
-        {/* Content */}
-        <div className="prose prose-lg max-w-none dark:prose-invert">
-          <Component />
+        {/* Content + TOC */}
+        <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_280px] lg:gap-10">
+          <div className="prose prose-lg dark:prose-invert">
+            <Component />
+          </div>
+          <aside className="mt-8 lg:mt-0">
+            <TableOfContents />
+          </aside>
         </div>
 
         {/* Back to blog link */}
         <footer className="mt-12 pt-8 border-t">
-          <div className="flex justify-between items-center">
-            <Button variant="outline" asChild>
-              <Link href="/blog" className="flex items-center gap-2">
-                <ArrowLeft className="h-4 w-4" />
-                More Posts
-              </Link>
-            </Button>
-            <Button variant="ghost" asChild>
-              <Link href="/#contact">
-                Get in Touch
-              </Link>
-            </Button>
+          <div className="flex flex-col gap-6">
+            <div className="flex justify-between gap-4">
+              <Button variant="outline" asChild>
+                <Link href="/blog" className="flex items-center gap-2">
+                  <ArrowLeft className="h-4 w-4" />
+                  More Posts
+                </Link>
+              </Button>
+              <ShareButtons title={meta.title} description={meta.excerpt || ''} />
+            </div>
+
+            {/* Previous/Next Navigation */}
+            <nav aria-label="Article navigation" className="flex flex-wrap justify-between gap-3">
+              {prevPost ? (
+                <Button asChild variant="secondary" className="flex-1 max-w-xs">
+                  <Link href={`/blog/${prevPost.slug}`} className="text-left">
+                    <div className="text-xs text-muted-foreground">Previous</div>
+                    <div className="truncate">← {prevPost.title}</div>
+                  </Link>
+                </Button>
+              ) : <div />}
+              {nextPost ? (
+                <Button asChild variant="secondary" className="flex-1 max-w-xs">
+                  <Link href={`/blog/${nextPost.slug}`} className="text-right">
+                    <div className="text-xs text-muted-foreground">Next</div>
+                    <div className="truncate">{nextPost.title} →</div>
+                  </Link>
+                </Button>
+              ) : <div />}
+            </nav>
+
+            <div className="flex justify-end">
+              <Button variant="ghost" asChild>
+                <Link href="/#contact">Get in Touch</Link>
+              </Button>
+            </div>
           </div>
         </footer>
       </article>
