@@ -1,12 +1,12 @@
 export const meta = {
-  title: 'Next.js + Supabase Stem Extraction with FFmpeg, Stripe, and NextAuth',
+  title: 'Audio Stem Extraction with Next.js, Supabase, and FFmpeg',
   slug: 'topline',
   date: '2024-01-15',
   tags: ['Next.js', 'React', 'Supabase', 'FFmpeg', 'Stripe', 'AI'],
   excerpt: 'A modern web app for musicians and producers to extract audio stems, manage credits, and process payments, all in a secure, scalable environment.',
   stack: ['Next.js', 'React', 'Supabase (PostgreSQL)', 'FFmpeg', 'Stripe', 'NextAuth.js', 'Tailwind CSS', 'Radix UI', 'Framer Motion', 'Wavesurfer.js'],
-  repo: 'https://github.com/serafinsanchez/toplineapp',
-  demo: 'https://acapellas.app',
+  repo: '',
+  demo: '',
   cover: '/images/projects/topline.gif'
 }
 
@@ -39,15 +39,6 @@ Topline is a comprehensive web platform that addresses the complex challenge of 
 - Modern animations with Framer Motion
 - Tailwind CSS with custom color palettes and Radix UI components
 
-## User Flow
-
-1. **Sign Up / Log In:** User creates an account or logs in using secure authentication
-2. **Upload Audio:** User uploads an audio file via a drag-and-drop interface
-3. **Purchase Credits:** If needed, user purchases credits through Stripe
-4. **Extract Stems:** User initiates stem extraction; credits are deducted automatically
-5. **Download Results:** User receives and downloads the separated audio stems
-6. **Profile & History:** User can view their profile, credit balance, and transaction history
-7. **(Admin) Dashboard:** Admins access a dashboard to manage users and credits
 
 ## Architecture & Backend
 
@@ -81,7 +72,7 @@ Topline is a comprehensive web platform that addresses the complex challenge of 
 ### Data Protection
 - Users can only access their own data through RLS policies
 - No sensitive payment info is stored on the platform (Stripe handles all payment data)
-- Custom CORS headers for API routes and secure HTTP headers
+ 
 
 ### File Security
 - Secure file handling with validation and cleanup
@@ -103,29 +94,6 @@ Topline is a comprehensive web platform that addresses the complex challenge of 
 - Enabled chunked uploads and increased server body size limits
 - Optimized for serverless deployment with proper resource allocation
 - Efficient client-side audio visualization and processing feedback
-
-## Tech Stack Breakdown
-
-### Frontend
-- **React 19** with Next.js App Router
-- **Tailwind CSS** with custom design system
-- **Radix UI** for accessible components
-- **Framer Motion** for smooth animations
-- **Wavesurfer.js** for audio visualization
-- **Lucide React** for modern icons
-
-### Backend & APIs
-- **Next.js API routes** and server actions
-- **Supabase** for database and real-time features
-- **FFmpeg** for audio processing
-- **Stripe** for payment processing
-- **MOISES API** for stem extraction
-
-### DevOps & Testing
-- **Docker** for local development
-- **Vercel** for production deployment
-- **Jest** and **Testing Library** for testing
-- **ESLint** and **PostCSS** for code quality
 
 ## Impact
 

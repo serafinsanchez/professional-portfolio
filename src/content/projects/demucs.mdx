@@ -1,12 +1,12 @@
 export const meta = {
-  title: 'Python + PyTorch Music Source Separation CLI (Demucs) with Batch Processing',
+  title: 'Music Source Separation CLI with Python, PyTorch, and Batch Processing',
   slug: 'demucs',
   date: '2023-06-10',
   tags: ['Python', 'PyTorch', 'AI', 'Audio Processing', 'Open Source'],
   excerpt: 'I modified and extended an open-source tool for music source separation, enabling users to split audio tracks into stems from folders of audio files using a CLI. Widely used by musicians, producers, and researchers.',
   stack: ['Python', 'PyTorch', 'torchaudio', 'ffmpeg'],
-  repo: 'https://github.com/facebookresearch/demucs',
-  demo: 'https://facebookresearch.github.io/demucs/',
+  repo: '',
+  demo: '',
   cover: '/images/projects/demucs.gif'
 }
 
@@ -40,14 +40,6 @@ Demucs democratizes access to high-quality music source separation, empowering m
 - **Third-Party GUIs:** Community-developed graphical interfaces
 - **Real-Time Processing:** Optimized for live audio processing scenarios
 
-## User Flow
-
-1. **Installation:** Install via pip, conda, or Docker
-2. **Model Selection:** Choose from pretrained models or load custom models
-3. **Audio Processing:** Run CLI command or use Python API for batch processing
-4. **Output Customization:** Configure format, bit depth, and quality settings
-5. **Results Retrieval:** Access separated stems from organized output directory
-6. **(Advanced) Model Training:** Use provided scripts for custom model development
 
 ## Architecture and Backend Design
 
@@ -120,32 +112,6 @@ Demucs democratizes access to high-quality music source separation, empowering m
 - **Web Demos:** Browser-based demonstrations and testing platforms
 - **Colab Integration:** Google Colab notebooks for easy experimentation
 - **Hugging Face Spaces:** Online demos and model sharing platform
-
-## Tech Stack Breakdown
-
-### Core Technologies
-- **Python 3.8+** for application logic and model implementation
-- **PyTorch** for deep learning framework and model training
-- **torchaudio** for audio processing and I/O operations
-- **FFmpeg** for comprehensive audio format support
-
-### Supporting Libraries
-- **numpy** for numerical computations and array operations
-- **julius** for audio filtering and signal processing
-- **einops** for tensor operations and reshaping
-- **soundfile** for additional audio I/O capabilities
-
-### Development & Training
-- **Hydra** for configuration management and experiment setup
-- **Dora-search** for experiment tracking and management
-- **tqdm** for progress bars and user feedback
-- **diffq** for optional quantization support
-
-### Deployment & Distribution
-- **Docker** for containerized deployment
-- **pip/conda** for package distribution and installation
-- **GitHub Actions** for continuous integration and testing
-- **PyPI** for package distribution and version management
 
 ## Impact and Results
 

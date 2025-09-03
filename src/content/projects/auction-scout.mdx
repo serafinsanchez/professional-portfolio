@@ -1,12 +1,12 @@
 export const meta = {
-  title: 'React + Express Auction Aggregator with GPT-4o Valuation',
+  title: 'Auction Aggregator with React, Express, and GPT-4o Valuation',
   slug: 'auction-scout',
   date: '2023-11-20',
   tags: ['React', 'Vite', 'Node.js', 'Express', 'OpenAI', 'AI'],
   excerpt: 'A modern web app for browsing, analyzing, and making informed decisions about online auction events and items, featuring AI-powered value estimation and a responsive, animated UI.',
   stack: ['React', 'Vite', 'Tailwind CSS', 'shadcn/ui', 'Node.js', 'Express', 'Axios', 'node-cron', 'OpenAI GPT-4o', 'Jest'],
-  repo: 'https://github.com/serafinsanchez/auction-scout',
-  demo: 'https://auction-scout-demo.vercel.app',
+  repo: '',
+  demo: '',
   cover: '/images/projects/auction-scout.png'
 }
 
@@ -50,14 +50,6 @@ Auction Scout empowers users to discover, analyze, and value auction items in re
 - **Caching Strategy:** Dual-layer caching (in-memory and Redis) for optimal performance
 - **Error Handling:** Comprehensive error logging and user-friendly messages
 
-## User Flow
-
-1. **Browse Auctions:** User lands on homepage and sees list of active auctions, sortable and paginated
-2. **View Auction Details:** User clicks auction to view all items with images, descriptions, and bid status
-3. **Analyze Items:** User views detailed item information, scrolls through images, and reviews bidding history
-4. **Get AI Price Estimate:** User requests AI-powered price estimate with detailed valuation and market context
-5. **Export Data:** User exports auction items to CSV for further analysis
-6. **(Admin) System Management:** Admin triggers manual refresh or checks system health via dedicated endpoints
 
 ## Architecture & Backend
 
@@ -85,15 +77,11 @@ Auction Scout empowers users to discover, analyze, and value auction items in re
 
 ### API Security
 - **CORS Configuration:** Restricted to known frontend ports for development security
-- **Input Validation:** Comprehensive validation on all API endpoints
-- **Rate Limiting:** Protection against API abuse and excessive requests
 - **Error Handling:** Secure error messages that don't expose system internals
 
 ### Data Protection
 - **No Sensitive Data Storage:** No user authentication or personal information handling
-- **Environment Variables:** Secure API key management for external services
 - **Sanitized Outputs:** Clean, validated data responses to frontend
-- **Request Validation:** Type checking and sanitization on all incoming requests
 
 ## UI/UX Details
 
@@ -140,33 +128,6 @@ Auction Scout empowers users to discover, analyze, and value auction items in re
 - **Cache Testing:** Specific tests for hit/miss scenarios and data integrity
 - **API Reliability:** Robust error handling and logging throughout the system
 - **Performance Monitoring:** Built-in health checks and metrics collection
-
-## Tech Stack Breakdown
-
-### Frontend Technologies
-- **React** with modern hooks and functional components
-- **Vite** for fast development and optimized production builds
-- **Tailwind CSS** for responsive, utility-first styling
-- **shadcn/ui** for accessible, customizable UI components
-- **lucide-react** for consistent iconography
-
-### Backend Technologies
-- **Node.js** with Express framework
-- **Cheerio** for HTML parsing and data extraction
-- **Axios** for HTTP client with advanced features
-- **node-cron** for scheduled task management
-- **Luxon** for date/time manipulation
-
-### AI & External Services
-- **OpenAI GPT-4o** for AI-powered price estimation
-- **Redis** (optional) for persistent caching
-- **Third-party APIs** with robust error handling
-
-### Development & Testing
-- **Jest** for unit testing backend logic
-- **Supertest** for API endpoint testing
-- **ESLint** and **Prettier** for code quality
-- **GitHub** for version control and collaboration
 
 ## Impact and Results
 

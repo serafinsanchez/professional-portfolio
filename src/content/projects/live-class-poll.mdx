@@ -1,5 +1,5 @@
 export const meta = {
-  title: 'Next.js 15 Real-Time Classroom Polling with Firebase and QR Access',
+  title: 'Real-Time Classroom Polling with Next.js 15, Firebase, and QR Access',
   slug: 'live-class-poll',
   date: '2024-12-29',
   tags: ['Next.js', 'React', 'Firebase', 'Education', 'Real-time'],
@@ -70,14 +70,6 @@ Built with modern web technologies and real-time architecture, Live Class Poll s
 - **Email Collection System:** Smart engagement-based email capture for premium features
 - **Export & Sharing:** CSV downloads and direct poll sharing with colleagues
 
-## User Flow
-
-1. **Educator Creates Poll:** Navigate to homepage, click "Create Poll", select poll type (multiple choice/free text/song link), add question and options, configure timer settings
-2. **Poll Sharing:** Automatic QR code generation, copy shareable link, display QR code on projector or share link via LMS
-3. **Student Participation:** Scan QR code or click link, view question and options, submit vote or response, see real-time results (if enabled)
-4. **Real-time Monitoring:** Instructor watches live results on share page, analyzes participation patterns, exports data for grading or analysis
-5. **Post-Poll Analytics:** Access dashboard for historical data, export results to CSV, create follow-up polls based on feedback
-6. **(Premium)** Email Collection: High-engagement users see email capture modal, unlock advanced dashboard features, receive poll management notifications
 
 ## Architecture & Backend
 
@@ -106,8 +98,6 @@ Built with modern web technologies and real-time architecture, Live Class Poll s
 ### API Security
 - **Firebase Security Rules:** Granular access control preventing unauthorized poll modification
 - **Rate Limiting:** Protection against spam submissions and excessive polling requests
-- **Input Validation:** Server-side sanitization of all user-generated content and poll responses
-- **CORS Configuration:** Proper cross-origin resource sharing settings for secure API access
 
 ### Data Protection  
 - **Privacy-First Design:** No personal data collection from students, minimal educator information
@@ -150,33 +140,6 @@ Built with modern web technologies and real-time architecture, Live Class Poll s
 - **Challenge:** Building sustainable user base while maintaining zero-barrier entry philosophy
 - **Solution:** Developed engagement-based email capture system triggered after users experience value
 - **Impact:** 25%+ email capture rate while preserving core user experience
-
-## Tech Stack Breakdown
-
-### Frontend Technologies
-- **Next.js 15:** React framework with App Router for modern routing and server components
-- **React 19:** Latest React features including concurrent rendering and automatic batching
-- **TypeScript:** Type-safe development with comprehensive interface definitions
-- **Tailwind CSS:** Utility-first styling with custom design system integration
-- **Framer Motion:** Smooth animations and micro-interactions for enhanced user experience
-
-### Backend Technologies
-- **Firebase Firestore:** Real-time NoSQL database with offline support and automatic scaling
-- **Firebase Admin:** Server-side SDK for secure database operations and user management
-- **Next.js API Routes:** Serverless functions for email processing and authentication
-- **Node.js Runtime:** Modern JavaScript execution environment with full ES2022 support
-
-### Development & Testing
-- **Jest:** Unit testing framework with React Testing Library for component testing
-- **Playwright:** End-to-end testing across multiple browsers with visual regression testing
-- **ESLint:** Code quality enforcement with educational-focused linting rules
-- **TypeScript Compiler:** Compile-time error detection and enhanced IDE support
-
-### Additional Services
-- **QR Code Generation:** Dynamic QR codes for instant poll access without manual URL sharing
-- **CSV Export System:** Server-side data processing for spreadsheet-compatible downloads
-- **Email Collection API:** Strategic engagement tracking with privacy-compliant data handling
-- **Analytics Integration:** User behavior tracking for continuous product improvement
 
 ## Impact and Results
 

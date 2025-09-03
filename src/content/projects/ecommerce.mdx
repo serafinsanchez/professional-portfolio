@@ -1,5 +1,5 @@
 export const meta = {
-  title: 'Next.js 15 E-Commerce Platform with Role-Based Access Control',
+  title: 'E-Commerce Platform with Next.js 15 and Role-Based Access Control',
   slug: 'ecommerce',
   date: '2025-01-15',
   tags: ['Next.js', 'Supabase', 'TypeScript', 'E-commerce', 'Authentication'],
@@ -52,16 +52,6 @@ The platform transforms a traditional manufacturing business by providing stream
 {/* ![Security Architecture](/images/projects/security-dashboard.png) */}
 {/* *Comprehensive admin dashboard with user role management and security monitoring* */}
 
-## User Flow
-
-1. **Discovery:** Users browse products through intuitive category navigation or intelligent search
-2. **Account Creation:** Seamless registration process with automatic role assignment and profile creation
-3. **Shopping Experience:** Add products to cart with real-time pricing based on user role (retail vs wholesale)
-4. **Vendor Application:** Business users can apply for wholesale pricing through detailed application forms
-5. **Checkout Process:** Streamlined checkout with address management and order confirmation
-6. **Custom Orders:** Specialized customers can request custom products with design uploads and specifications
-7. **(Admin) Order Management:** Administrators track all orders, manage user roles, and approve vendor applications
-8. **Email Notifications:** Automated email confirmations and updates throughout the order lifecycle
 
 ## Architecture & Backend
 
@@ -89,10 +79,7 @@ The platform transforms a traditional manufacturing business by providing stream
 ## Security Measures
 
 ### API Security
-- **Authentication Middleware:** JWT token validation on all protected routes with role-based access control
-- **Request Validation:** Input sanitization and validation using TypeScript schemas
-- **Rate Limiting:** Protection against abuse with request throttling on critical endpoints
-- **CORS Configuration:** Properly configured cross-origin resource sharing policies
+- **JWT + RBAC Enforcement:** Token validation with server-side role checks on protected routes
 
 ### Data Protection
 - **Encrypted Storage:** All sensitive data encrypted at rest and in transit
@@ -144,30 +131,6 @@ The platform transforms a traditional manufacturing business by providing stream
 ### File Upload Security
 **Challenge:** Allowing customers to upload design files for custom orders while maintaining security and preventing malicious uploads.
 **Solution:** Implemented secure file upload pipeline with type validation, virus scanning, and role-based access controls using Supabase Storage.
-
-## Tech Stack Breakdown
-
-### Frontend Technologies
-- **Next.js 15 & React 19:** Latest framework features with App Router and Server Components
-- **TypeScript:** Full type safety across client and server code
-- **Tailwind CSS v4:** Utility-first styling with modern design system
-- **shadcn/ui & Radix UI:** Accessible component library with consistent design patterns
-- **Framer Motion:** Smooth animations and micro-interactions
-- **Zustand:** Lightweight state management for cart functionality
-
-### Backend Technologies  
-- **Supabase:** Complete backend-as-a-service with PostgreSQL, Auth, and Storage
-- **Next.js API Routes:** Serverless functions with middleware protection
-- **Row Level Security:** Database-level security policies for data protection
-- **PostgreSQL:** Robust relational database with advanced indexing and full-text search
-- **Resend:** Transactional email service for order confirmations and notifications
-
-### Development & Testing
-- **ESLint & Prettier:** Code quality and formatting consistency
-- **TypeScript:** Compile-time error checking and enhanced developer experience
-- **Supabase CLI:** Database migrations and local development environment
-- **Vercel:** Production deployment with edge functions and global CDN
-- **Performance Monitoring:** Real-time application performance tracking and optimization
 
 ## Impact and Results
 

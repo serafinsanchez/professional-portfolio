@@ -1,11 +1,11 @@
 export const meta = {
-  title: 'Python Streamlit Transcriber with AssemblyAI, Diarization, and Subtitles',
+  title: 'Audio Transcriber with Python, Streamlit, and AssemblyAI',
   slug: 'notebooklm-transcriber',
   date: '2024-01-10',
   tags: ['Python', 'Streamlit', 'AssemblyAI', 'Google Cloud Translate', 'AI'],
   excerpt: 'A web app for fast, accurate multi-language audio transcription and translation, featuring speaker diarization, custom speaker naming, and instant subtitle export.',
   stack: ['Python', 'Streamlit', 'AssemblyAI API', 'Google Cloud Translate API', 'python-dotenv', 'Secure Temporary File Handling'],
-  repo: 'https://github.com/serafinsanchez/notebooklm-transcribe',
+  repo: '',
   demo: '',
   cover: '/images/projects/notebooklm-transcriber.gif'
 }
@@ -46,16 +46,6 @@ This project democratizes access to high-quality, multi-language transcription a
 - View both sample and full transcripts
 - No login required for frictionless experience
 
-## User Flow
-
-1. **Upload Audio:** User selects and uploads an audio file through drag-and-drop interface
-2. **Select Source Language:** User chooses the language spoken in the audio from dropdown
-3. **Transcription:** The app transcribes the audio, displaying a sample of the result
-4. **Speaker Naming:** User optionally assigns custom names to detected speakers
-5. **View Full Transcript:** User generates and reviews the complete transcript
-6. **Translate (Optional):** User selects a target language and translates the transcript
-7. **Download:** User downloads transcript and/or subtitles in preferred formats
-8. **Session Reset:** User can start a new session at any time
 
 ## Architecture and Backend Design
 
@@ -86,10 +76,8 @@ This project democratizes access to high-quality, multi-language transcription a
 - **No User Accounts:** Privacy-first approach with no authentication required
 
 ### Compliance & Best Practices
-- **International Data Protection Standards:** Documentation emphasizes compliance requirements
-- **Local Processing:** Transcription metadata processed locally where possible
+- **Local Processing Preference:** Transcription metadata processed locally where possible
 - **Secure File Handling:** Industry-standard temporary file management
-- **API Security:** Proper error handling and secure API communication
 
 ## Technical Challenges Overcome
 
@@ -136,25 +124,6 @@ This project democratizes access to high-quality, multi-language transcription a
 - Keyboard navigation support
 - Clear error messages and user guidance
 - Mobile-responsive design for on-the-go use
-
-## Tech Stack Breakdown
-
-### Frontend/Interface
-- **Streamlit** for rapid web app development and deployment
-- **Python** for all application logic and data processing
-- **Custom CSS** for enhanced styling and user experience
-
-### Backend/APIs
-- **AssemblyAI** for advanced audio transcription with speaker diarization
-- **Google Cloud Translate** for comprehensive translation services
-- **python-dotenv** for secure environment variable management
-- **Temporary File Libraries** for secure file handling
-
-### Development Tools
-- **Requirements.txt** for dependency management
-- **Local Environment Setup** for development and testing
-- **Manual Testing** workflows for quality assurance
-- **Documentation** for setup and usage instructions
 
 ## Impact and Problem Solved
 

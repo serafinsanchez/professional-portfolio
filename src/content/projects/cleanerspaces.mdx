@@ -1,12 +1,12 @@
 export const meta = {
-  title: 'Next.js 14 Directory Platform with PostgreSQL, Leaflet Maps, and SSR',
+  title: 'Directory Platform with Next.js 14, PostgreSQL, and Leaflet Maps',
   slug: 'cleanerspaces',
   date: '2023-09-15',
   tags: ['Next.js 14', 'React', 'TypeScript', 'PostgreSQL', 'Tailwind CSS'],
   excerpt: 'A directory website to connect people with specialized cleaners in their area, featuring business search, ratings, and a responsive, accessible UI.',
   stack: ['Next.js 14', 'React', 'TypeScript', 'Tailwind CSS', 'Radix UI', 'PostgreSQL', 'Leaflet.js', 'Node.js', 'REST API', 'Zod'],
   repo: '',
-  demo: 'https://cleanerspaces.co',
+  demo: '',
   cover: '/images/projects/cleaner-spaces.png'
 }
 
@@ -43,15 +43,6 @@ CleanerSpaces addresses the challenge of finding reliable, local cleaning servic
 - **Flexible Service Options:** Residential, commercial, and specialized cleaning categories
 - **Custom Quote Requests:** Direct communication with providers for specialized needs
 
-## User Flow
-
-1. **Location Entry:** User enters ZIP code or selects city from dropdown
-2. **Service Selection:** Choose from residential, commercial, or specialized cleaning options
-3. **Provider Matching:** System filters available businesses based on location and service type
-4. **Compare & Review:** View detailed profiles, read reviews, and compare providers
-5. **Price Estimation:** Use dynamic calculator to estimate service costs
-6. **Provider Selection:** Select preferred cleaning service and initiate contact
-7. **Booking Process:** Connect directly with chosen provider for scheduling
 
 ## Architecture & Backend
 
@@ -76,10 +67,7 @@ CleanerSpaces addresses the challenge of finding reliable, local cleaning servic
 ## Security Measures
 
 ### Data Protection & Privacy
-- **Environment Variable Protection:** Secure handling of sensitive configuration data
 - **SQL Injection Prevention:** Parameterized queries and input validation
-- **API Security:** Rate limiting, request validation, and proper error handling
-- **Data Sanitization:** Input validation and sanitization on all user forms
 
 ### Performance & Reliability
 - **Query Optimization:** Efficient database indexing and query structure
@@ -126,27 +114,6 @@ CleanerSpaces addresses the challenge of finding reliable, local cleaning servic
 - **Local SEO:** City and service-specific landing pages for improved discoverability
 - **Meta Optimization:** Dynamic meta tags and structured data implementation
 - **Performance Optimization:** Fast loading times and Core Web Vitals optimization
-
-## Tech Stack Breakdown
-
-### Frontend Technologies
-- **Next.js 14** with App Router for modern React architecture
-- **React** with hooks and context for state management
-- **TypeScript** for type safety and developer experience
-- **Tailwind CSS** for responsive design and component styling
-- **Radix UI** for accessible, customizable UI components
-
-### Backend & Database
-- **Node.js** runtime with Next.js API routes
-- **PostgreSQL** for robust relational data management
-- **Vercel Postgres** for managed database hosting
-- **RESTful APIs** with proper HTTP methods and status codes
-
-### Development & Deployment
-- **Vercel** for seamless deployment and hosting
-- **ESLint** and **Prettier** for code quality and consistency
-- **Jest** for unit and integration testing
-- **GitHub** for version control and collaborative development
 
 ## Impact and Results
 

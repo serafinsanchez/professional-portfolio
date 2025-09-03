@@ -1,11 +1,11 @@
 export const meta = {
-  title: 'Next.js 14 + InstantDB QR Form System with Embeddable BigCommerce Widgets',
+  title: 'QR Form System with Next.js 14, InstantDB, and BigCommerce Widgets',
   slug: 'janmarini-test-qr-form-widget',
   date: '2024-12-19',
   tags: ['Next.js', 'InstantDB', 'Embeddable Widgets', 'TypeScript', 'Tailwind CSS'],
   excerpt: 'A sophisticated post-purchase feedback collection system with embeddable widgets for e-commerce integration, featuring real-time data collection, photo uploads, and seamless BigCommerce embedding.',
   stack: ['Next.js 14', 'TypeScript', 'InstantDB', 'Tailwind CSS', 'Framer Motion', 'React Hook Form', 'Zod', 'Rollup', 'BigCommerce API'],
-  repo: 'https://github.com/serafinsanchez/janmarini-test',
+  repo: '',
   demo: '',
   cover: '/images/projects/qr-form.jpg'
 }
@@ -48,16 +48,6 @@ The system addresses the gap between traditional feedback collection methods and
 - **Visual Hierarchy:** Clean, minimalist interface with strategic white space
 - **Brand Consistency:** Maintains visual identity across all touchpoints
 
-## User Flow
-
-1. **Customer Discovery:** Customer receives product with QR code or visits embedded widget
-2. **Landing Experience:** Elegant introduction with clear value proposition and call-to-action
-3. **Progressive Form:** Step-by-step collection of purchase location, NPS score, and feedback
-4. **Photo Collection:** Optional before/after photo uploads with drag-and-drop interface
-5. **Skin Concern Analysis:** Targeted question about primary skincare concerns
-6. **Loyalty Enrollment:** Email collection for exclusive benefits and follow-up communication
-7. **Confirmation:** Success screen with benefits overview and next steps
-8. **Admin Review:** Merchants access dashboard to review submissions and export data
 
 ## Architecture & Backend
 
@@ -82,10 +72,8 @@ The system addresses the gap between traditional feedback collection methods and
 ## Security Measures
 
 ### API Security
-- **Input Sanitization:** Comprehensive validation and sanitization of all user inputs
 - **Rate Limiting:** Protection against abuse and spam submissions
 - **CORS Policies:** Secure cross-origin requests for widget integration
-- **Environment Variables:** Sensitive credentials stored securely in environment files
 
 ### Data Protection
 - **Schema Validation:** Server-side validation prevents malicious data injection
@@ -132,31 +120,6 @@ The system addresses the gap between traditional feedback collection methods and
 - **Load Time Optimization:** Sub-2-second load times across all device types
 - **Mobile Performance:** Optimized animations and interactions for mobile devices
 - **Memory Management:** Efficient cleanup and resource management for long-running sessions
-
-## Tech Stack Breakdown
-
-### Frontend Technologies
-- **Next.js 14:** Modern React framework with App Router and server components
-- **TypeScript 5.3:** Full type safety and enhanced development experience
-- **Tailwind CSS 3.4:** Utility-first CSS framework with custom design system
-- **Framer Motion 10.16:** Animation library for smooth transitions and interactions
-
-### Backend Technologies
-- **InstantDB:** Real-time database with automatic schema management
-- **Next.js API Routes:** Server-side API endpoints with TypeScript support
-- **Zod Validation:** Schema validation for both client and server-side data
-- **File Upload System:** Secure image handling with progress tracking
-
-### AI & External Services
-- **BigCommerce Integration:** E-commerce platform API for widget embedding
-- **Google Services:** QR code generation and analytics integration
-- **InstantDB Admin SDK:** Server-side database management and data operations
-
-### Development & Testing
-- **Rollup Build System:** Optimized widget bundling with tree-shaking
-- **ESLint Configuration:** Code quality and consistency enforcement
-- **TypeScript Compiler:** Static type checking and error prevention
-- **Development Tools:** Hot reloading, debugging, and performance monitoring
 
 ## Impact and Results
 
