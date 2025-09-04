@@ -28,7 +28,7 @@ export function Header() {
         <div className="flex h-16 items-center justify-between">
           <Link 
             href="/" 
-            className="text-lg sm:text-xl font-serif font-normal header-text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
+            className="text-lg sm:text-xl font-instrument-sans font-medium header-text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
             aria-label="Go to homepage"
           >
             Serafin Sanchez
@@ -41,7 +41,7 @@ export function Header() {
                 <a
                   key={item.href}
                   href={item.href}
-                  className="text-sm font-medium header-text-white transition-colors hover:text-gray-900 hover:dark:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm py-2 px-3"
+                  className="text-sm font-instrument-sans font-medium header-text-white transition-colors hover:text-gray-900 hover:dark:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm py-2 px-3"
                 >
                   {item.label}
                 </a>
@@ -80,7 +80,7 @@ export function Header() {
                     key={item.href}
                     href={item.href}
                     onClick={handleNavClick}
-                    className="text-base font-medium header-text-white transition-colors hover:text-gray-900 hover:dark:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm py-3 px-3 flex items-center min-h-[44px]"
+                    className="text-base font-instrument-sans font-medium header-text-white transition-colors hover:text-gray-900 hover:dark:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm py-3 px-3 flex items-center min-h-[44px]"
                   >
                     {item.label}
                   </a>

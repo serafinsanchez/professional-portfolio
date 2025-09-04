@@ -23,6 +23,10 @@ const config: Config = {
   			serif: [
   				'var(--font-instrument-serif)',
   				'serif'
+  			],
+  			'instrument-sans': [
+  				'var(--font-instrument-sans)',
+  				'sans-serif'
   			]
   		},
   		colors: {

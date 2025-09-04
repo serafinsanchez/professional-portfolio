@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter, Poppins, Instrument_Serif } from 'next/font/google'
+import { Inter, Poppins, Instrument_Serif, Instrument_Sans } from 'next/font/google'
 import { ThemeProvider } from '@/components/providers/ThemeProvider'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
@@ -21,6 +21,12 @@ const instrumentSerif = Instrument_Serif({
   subsets: ['latin'],
   weight: ['400'],
   variable: '--font-instrument-serif',
+})
+
+const instrumentSans = Instrument_Sans({ 
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  variable: '--font-instrument-sans',
 })
 
 export const metadata: Metadata = {
@@ -108,7 +114,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${poppins.variable} ${instrumentSerif.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${poppins.variable} ${instrumentSerif.variable} ${instrumentSans.variable}`}>
       <head>
         <script
           defer

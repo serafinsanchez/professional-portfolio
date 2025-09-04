@@ -23,7 +23,7 @@ export function HeroSection() {
         transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
       >
         <p 
-          className="mt-6 text-lg leading-8 text-gray-900 dark:[color:#ffffff!important] font-serif font-normal sm:text-xl sm:leading-9 md:text-2xl lg:text-3xl"
+          className="mt-6 text-lg leading-8 text-gray-900 dark:[color:#ffffff!important] font-instrument-sans font-normal sm:text-xl sm:leading-9 md:text-2xl lg:text-3xl"
           style={{ color: 'inherit' }}
         >
           Full-stack, AI-native developer building business solutions and exploring creativity through code.
