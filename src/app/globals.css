@@ -132,6 +132,15 @@
 }
 
 @layer components {
+  /* Force white text in dark mode for header elements */
+  .header-text-white {
+    color: rgb(55, 65, 81); /* gray-700 for light mode */
+  }
+  
+  .dark .header-text-white {
+    color: #ffffff !important;
+  }
+
   /* Minimal prose theme for MDX content */
   .prose {
     max-width: 75ch; /* comfortable line length */
