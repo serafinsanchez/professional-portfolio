@@ -1,0 +1,139 @@
+export const meta = {
+  title: "Version Control for Vibe Coders: An Intro to Git and GitHub",
+  date: "2025-09-01",
+  tags: ["git", "github", "version-control", "beginners", "ai-development", "tutorial"],
+  excerpt: "When you are using AI tools to build projects, version control is your quiet safety net. Learn the essential Git commands and workflow that will save you time and stress.",
+  author: "Serafin Sanchez",
+  readTime: "7 min read"
+}
+
+# Version Control for Vibe Coders. An Intro to Git and Github
+
+When you are using AI tools to build projects, version control is your quiet safety net. Think of it as **Save and Save As for your entire project**. It remembers what changed, when, and why, so you can move fast without worrying about losing work.
+
+---
+
+## What is version control?
+
+If you have ever used Google Docs Edit History or Track Changes in Microsoft Word, you already know the idea. You can see who changed what and when, compare drafts, and roll back if needed.
+
+Version control brings that same power to any folder of files. It saves snapshots called **commits**, each with a short message describing the change. This makes it easy to understand your progress step by step.
+
+With AI generating lots of edits quickly, version control keeps your project organized and gives you a big "undo" button when things go sideways.
+
+---
+
+## Why track changes?
+
+Tracking changes is like giving your project a **time machine**. You get project-wide undo and redo, so if a new idea breaks something you can roll back without panic. Older versions are always available, which means you can experiment safely knowing you can always return to a stable point. Over time, your commit history becomes a journal of your project, letting you scroll through the story of how your work evolved.
+
+---
+
+## What is GitHub?
+
+GitHub is like Google Drive or Dropbox, but built for tracking changes and teamwork. It stores your project in the cloud so you always have a backup, shows your history of **commits** in a clear timeline, and makes collaboration easier by letting people suggest edits that you can review before accepting. 
+
+On GitHub, each project lives inside a repository, often shortened to repo. You can think of a repo as a folder that contains your files, your history, and some helpful extras. The README acts as your project's front page, Issues serve as a shared to-do list, and Pull Requests are proposals for changes that you can review. Every project gets its own repo, both on your computer and on GitHub.
+
+---
+
+## A simple mental model
+
+Picture your project folder as one giant Google Doc.
+
+* A **commit** is a saved version of that doc with a note.
+* A **branch** is a sandbox copy where you can try new ideas safely.
+* **GitHub** is the online folder that holds everything, keeps history, and adds review tools.
+
+---
+
+## Commands you will actually use
+
+Here's the short list you need for everyday work:
+
+```bash
+# Start a project and connect it to Git
+git init
+
+# See what changed
+git status
+
+# Save a snapshot with a message
+git add -A
+git commit -m "feat: add first notes"
+
+# Create and switch to a sandbox branch
+git switch -c feature/first-draft
+
+# Merge your sandbox into main when ready
+git switch main
+git merge feature/first-draft
+
+# Connect to GitHub once and push your work up
+git remote add origin https://github.com/yourname/yourrepo.git
+git push -u origin main
+
+# Bring down the latest updates from GitHub
+git pull
+
+# Undo a bad commit by making a new commit that reverses it
+git revert <commit_id>
+```
+
+---
+
+## A 5-minute practice
+
+Try this quick exercise:
+
+1. Create a new empty folder.
+2. Add a file named `notes.txt` with one sentence.
+3. Run the `init`, `add`, and `commit` commands to save your first snapshot.
+4. Create a new branch, edit the sentence, and commit again.
+5. Switch back to main and notice your change is not there yet.
+6. Merge your branch into main and see the change appear.
+
+This loop is the essence of Git. It lets you experiment without fear.
+
+---
+
+## Quick recap
+
+* A **commit** is a snapshot with a message
+* A **branch** is a separate line of work for experiments
+* **Merge** means combining one branch into another
+* A **remote** is your copy of the project on GitHub
+* A **pull request** is a proposed merge with review built in
+
+---
+
+## Print-friendly one pager
+
+For your first week, keep a one-page cheat sheet next to your keyboard:
+
+* **Minimal commands** for init, add, commit, push, pull
+* **Branch workflow** for create, switch, merge
+* **Undo options** like `git revert`
+
+---
+
+## Key terms explained
+
+Here are some of the terms introduced, with beginner‑friendly explanations.
+
+* **commit**: a saved snapshot of your project at a certain moment, like pressing Save in Google Docs with a note about what changed.
+* **branch**: a safe copy of your project where you can try new ideas without affecting your main work.
+* **merge**: combining the changes from one branch into another, similar to pasting edits from one document into the master copy.
+* **repository (repo)**: the project folder that holds all your files and the full change history, both on your computer and on GitHub.
+* **remote**: the version of your repo stored online, usually on GitHub, so you can back up and share your work.
+* **pull request**: a request to merge changes into the main project, giving you or your teammates a chance to review edits before they are accepted.
+* **readme**: a front page for your repo where you describe the project, like an introduction at the top of a shared document.
+* **issues**: a shared to‑do list where you and others can track tasks, bugs, or ideas for the project.
+
+---
+
+## Final thought
+
+AI helps you build fast. Git helps you build safely. GitHub keeps everything backed up and shareable. 
+
+You only need a small handful of commands to get moving, and the rest can wait until you need them. The good news is that modern AI code editors, like [Cursor](https://cursor.sh), let you speed up your workflow by using plain English. You can describe what you want, like "save my changes with this note," and the AI will do the heavy lifting, translating it into the proper Git command in the background. This approach is described more fully in the article [Talking to Git Through AI: How Cursor Turns Commands Into Conversations](/blog/talking-to-git), which shows how natural language can extend Git and make it easier to use. 
