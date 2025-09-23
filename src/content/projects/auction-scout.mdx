@@ -5,14 +5,14 @@ export const meta = {
   tags: ['React', 'Vite', 'Node.js', 'Express', 'OpenAI', 'AI'],
   excerpt: 'A modern web app for browsing, analyzing, and making informed decisions about online auction events and items, featuring AI-powered value estimation and a responsive, animated UI.',
   stack: ['React', 'Vite', 'Tailwind CSS', 'shadcn/ui', 'Node.js', 'Express', 'Axios', 'node-cron', 'OpenAI GPT-4o', 'Jest'],
-  repo: '',
+  repo: 'available on request',
   demo: '',
   cover: '/images/projects/auction-scout.png'
 }
 
 ## Project Overview
 
-Auction Scout empowers users to discover, analyze, and value auction items in real time by aggregating data from multiple sources and providing instant, AI-powered price estimates. It streamlines the auction browsing experience, supports informed bidding, and gives auction managers operational visibility and data export tools.
+I built Auction Scout to solve a real problem for a friend trying to find good deals at local auctions without spending hours browsing multiple websites. It pulls auction data from different sources, shows everything in one clean interface, and uses AI to give you instant price estimates on items you're interested in. Whether you're hunting for bargains or managing auctions, it makes the whole process way less tedious.
 
 ![Auction Scout Interface](/images/projects/auction-scout-1.png)
 *Modern interface showing auction listings with advanced filtering and search capabilities*
@@ -20,13 +20,13 @@ Auction Scout empowers users to discover, analyze, and value auction items in re
 ## Key Features
 
 ### 🔍 Unified Auction Aggregation
-- **Multi-Source Data:** Scrapes and normalizes auction data from Dickensheet.com (extensible to more sources)
+- **Multi-Source Data:** Scrapes and normalizes auction data from local auction sites (extensible to more sources)
 - **Decoupled Architecture:** React frontend fetches all data from backend, never directly from third-party APIs
 - **Real-Time Updates:** Auction data refreshed every 10 minutes automatically
 - **Manual Refresh:** Admin-triggered data updates for immediate synchronization
 
 ### 🤖 AI-Powered Price Estimation
-- **OpenAI GPT-4o Integration:** Expert-level price estimates using both images and descriptions
+- **Claude Sonnet Integration:** Expert-level image identificatio and price estimates using both images and descriptions
 - **Instant Valuation:** One-click price estimation for any auction item
 - **Detailed Analysis:** Comprehensive valuation reports with market context
 - **Batch Processing:** Support for multiple item estimation simultaneously
@@ -106,7 +106,7 @@ Auction Scout empowers users to discover, analyze, and value auction items in re
 ## Technical Challenges Overcome
 
 ### Resilient Web Scraping
-- **Robust Error Handling:** Built comprehensive retry logic for unreliable third-party sites
+- **Robust Error Handling:** Comprehensive retry logic for unreliable third-party sites
 - **Rate Limiting:** Implemented respectful scraping practices to avoid blocking
 - **Data Normalization:** Created unified data models from disparate auction sources
 - **Change Detection:** Built systems to handle website structure changes gracefully
@@ -149,6 +149,8 @@ Auction Scout empowers users to discover, analyze, and value auction items in re
 - **Administrative Efficiency:** Streamlined data management for auction administrators
 - **Competitive Advantage:** AI-powered features differentiate from traditional auction browsers
 
-Auction Scout represents a successful fusion of modern web development, AI integration, and practical business utility, creating a valuable tool for the auction community while demonstrating advanced technical capabilities.
+This project was a fun challenge that really showcased what you can do when you combine smart web scraping, AI, and good old-fashioned problem-solving. Instead of jumping between different auction sites and guessing at values, users now have one place to track everything with AI-powered price estimates that actually make sense.
+
+The coolest part was figuring out how to make web scraping reliable (because auction sites love to change their layouts) and keeping AI costs reasonable while still giving accurate valuations. It's the kind of tool I'd actually use myself if I were browsing auctions, which is always a good sign.
 
 
