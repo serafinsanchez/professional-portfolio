@@ -2,41 +2,41 @@ export const meta = {
   title: "MagicMiro: How I Added a Feature to One of My Favorite Tools",
   date: "2025-09-03",
   tags: ["productivity", "miro", "macos", "automation", "developer-tools"],
-  excerpt: "I created a simple menu bar app that solved small workflow problem and saved me a ton of time.",
+  excerpt: "I created a simple menu bar app that solved a small workflow problem and saved me hours every week.",
   author: "Serafin Sanchez",
   readTime: "4 min read"
 }
 
 import { DownloadWithEmail } from '@/components'
 
-# How I Added a Feature to One of My Favorite Tools: MagicMiro for Miro
+# Building MagicMiro: Adding a Missing Feature to Miro
 
-## The problem every Miro user knows too well
+## The Problem: Death by a Thousand Copy-Pastes
 
-I live in Miro boards daily for both work and personal projects. I found myself often needing to manually create dozens of sticky notes in Miro from a list of user stories, feedback items, and brainstorming points. Copy. Create new sticky note. Paste. Repeat. When pasting from a spreadsheet, Miro did have a feature that would paste as separate sticky notes, but it didn't work well with multiple lines of text.
+I live in Miro boards daily for both work and personal projects. Whether organizing user stories, feedback items, or brainstorming points, I found myself repeating the same tedious workflow: Copy text. Create new sticky note. Paste. Repeat. Miro offered a paste-as-separate-stickies feature for spreadsheets, but it failed with plain multi-line text.
 
-## Validating the problem
+## Validating the Problem
 
-I wasn't alone in this frustration. Searching through Miro community forums and Reddit, I found dozens of posts from other users describing the same tedious workflow and looking for a solution.
+I wasn't alone. A quick search through Miro community forums and Reddit revealed dozens of frustrated users describing the same workflow bottleneck.
 
-To test if a solution would actually be useful to others, I built a simple web app that could convert clipboard text into the right format that allowed pasting as separate sticky notes. Users could copy their text, paste it into the web tool, convert it, then copy the result back to paste into Miro.
+To validate demand, I built a simple web app that converted clipboard text into Miro's expected format. The proof of concept worked, but the feedback was unanimous: **switching between browser tabs broke the flow almost as much as the original problem.** 
 
-The feedback was clear: **having to switch between browser tabs broke the flow almost as much as the original problem.** What people really wanted was something that lived right in their workflow. That's when I decided a native menu bar app was the right solution.
+People needed something that lived *in* their workflow, not beside it. A native menu bar app was the answer.
 
-## What MagicMiro does
+## What MagicMiro Does
 
-MagicMiro is a lightweight macOS application that runs in your menu bar and converts clipboard text into a format that Miro recognizes as multiple sticky notes. It feels simple on purpose.
+MagicMiro is a lightweight macOS menu bar app that converts clipboard text into a format Miro recognizes as multiple sticky notes. Simple by design.
 
-Here's what happens:
+Here's the workflow:
 
-1. **Copy any multi line text** (user stories, feedback, task lists)
+1. **Copy any multi-line text** (user stories, feedback, task lists)
 2. **Press CMD+G** (customizable) to convert your clipboard
 3. **Paste in Miro** (CMD+V) and select "Paste data as separate sticky notes"
-4. **Watch as dozens of sticky notes appear instantly** 🎉
+4. **Watch dozens of sticky notes appear instantly** 🎉
 
-## How it works 
+## How It Works 
 
-Imagine you have a list of items like this:
+Say you have a list like this:
 
 ```
 Apple
@@ -47,26 +47,23 @@ Asparagus
 Almond
 ```
 
-**Without:** When you paste this directly into Miro, you get one big text block.
+**Without MagicMiro:** Pasting this into Miro creates one big text block.
 
-**With:** After copying the text and pressing CMD+G, when you paste into Miro, you'll see a prompt asking how you want to paste the data. Select "Paste data as separate sticky notes" and watch as each line becomes its own individual sticky note:
+**With MagicMiro:** After copying and pressing CMD+G, paste into Miro and select "Paste data as separate sticky notes." Each line becomes its own sticky note:
 
 ![Miro paste prompt showing options to paste as separate sticky notes](/images/blog/paste-as.png)
 
-
-
-Each item becomes an individual sticky note, no more manual creation going line by line!
-
 ![Individual sticky notes created by MagicMiro in Miro](/images/blog/stickies.png)
 
+No more manual line-by-line creation.
 
-## Could be most useful for:
+## Who Benefits Most
 
 - **Product managers** organizing user stories and requirements
 - **UX researchers** categorizing user feedback and insights
 - **Scrum masters** preparing sprint planning sessions
 - **Designers** organizing design system components
-- **Facilitators and meeting leads** facilitating remote brainstorming sessions
+- **Workshop facilitators** running remote brainstorming sessions
 
 
 ## Download MagicMiro
@@ -77,11 +74,11 @@ Each item becomes an individual sticky note, no more manual creation going line 
   source="magicmiro-download"
   title="Download MagicMiro v1.0"
   description="Get notified about updates and new features"
-  fileSize="4.8MB"
+  fileSize="1.4MB"
 />
 
-*Note* You may see a security warning on first launch. This is normal for new developers on macOS. Right click the app and select "Open" to bypass the warning.
+**Note:** You may see a security warning on first launch—this is standard for new macOS developers. Right-click the app and select "Open" to bypass the warning.
 
-## What's next?
+## What's Next?
 
-I'm considering adding text formatting preservation and custom sticky note colors. Have ideas or feedback? [Get in touch](/contact).
+I'm exploring text formatting preservation and custom sticky note colors. Have ideas or feedback? [Get in touch](/contact).
