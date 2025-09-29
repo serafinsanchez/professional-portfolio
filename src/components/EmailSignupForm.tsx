@@ -20,7 +20,7 @@ export default function EmailSignupForm() {
 
   const onSubmit = async (data: FormData) => {
     setStatus('idle')
-    const res = await fetch('/api/signup', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) })
+    const res = await fetch('/api/newsletter', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) })
     const json = await res.json().catch(() => ({}))
     if (res.ok && (json as any)?.ok) { setStatus('ok'); reset() } else { setStatus('err') }
   }
