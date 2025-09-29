@@ -39,6 +39,7 @@ export async function POST(req: Request) {
     if (err?.code === 'constraint_violation' || /unique/i.test(String(err?.message))) {
       return NextResponse.json({ ok: true })
     }
+    console.error('Newsletter signup error:', err)
     return NextResponse.json({ ok: false, error: 'Server error' }, { status: 500 })
   }
 }
