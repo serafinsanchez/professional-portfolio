@@ -1,6 +1,6 @@
 import Link from "next/link"
 import dynamic from "next/dynamic"
-import { Section, ProjectCard, BlogCard, HeroSection } from "@/components"
+import { Section, ProjectCard, BlogCard, HeroSection, EmailSignupForm } from "@/components"
 import { Button } from "@/components/ui/button"
 import { getAllProjects } from "@/lib/projects"
 import { getRecentBlogPosts } from "@/lib/blog"
@@ -146,6 +146,9 @@ export default async function Home() {
             </p>
           </div>
           <ContactForm />
+          <div className="mt-6">
+            <EmailSignupForm />
+          </div>
         </div>
       </Section>
     </main>

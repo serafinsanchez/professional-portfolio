@@ -28,6 +28,7 @@ export function TableOfContents({ className = '' }: TableOfContentsProps) {
       return heading.closest('article')
     })
 
+    const usedIds = new Set<string>()
     const headingsData: Heading[] = headingElements.map((heading, index) => {
       const level = parseInt(heading.tagName.charAt(1))
       let id = heading.id
@@ -38,11 +39,20 @@ export function TableOfContents({ className = '' }: TableOfContentsProps) {
           ?.toLowerCase()
           .replace(/[^a-z0-9]+/g, '-')
           .replace(/(^-|-$)/g, '') || `heading-${index}`
-        heading.id = id
       }
 
+      // Ensure unique IDs by adding a suffix if duplicate
+      let uniqueId = id
+      let suffix = 1
+      while (usedIds.has(uniqueId)) {
+        uniqueId = `${id}-${suffix}`
+        suffix++
+      }
+      usedIds.add(uniqueId)
+      heading.id = uniqueId
+
       return {
-        id,
+        id: uniqueId,
         text: heading.textContent || '',
         level
       }

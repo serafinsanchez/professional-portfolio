@@ -7,6 +7,8 @@ export const meta = {
   readTime: "4 min read"
 }
 
+import { DownloadWithEmail } from '@/components'
+
 # How I Added a Feature to One of My Favorite Tools: MagicMiro for Miro
 
 ## The problem every Miro user knows too well
@@ -32,15 +34,14 @@ Here's what happens:
 3. **Paste in Miro** (CMD+V) and select "Paste data as separate sticky notes"
 4. **Watch as dozens of sticky notes appear instantly** 🎉
 
-
-<div style={{ textAlign: 'center', margin: '30px 0' }}>
-  <a href="#download-link" style={{ background: '#2196F3', color: 'white', padding: '12px 24px', textDecoration: 'none', borderRadius: '6px', fontWeight: 'bold', display: 'inline-block' }}>
-    📥 Download MagicMiro v1.0
-  </a>
-  <div style={{ marginTop: '8px', color: '#666', fontSize: '14px' }}>
-    Free Download • macOS 11.0+ • 4.8MB
-  </div>
-</div>
+<DownloadWithEmail
+  downloadUrl="/MagicMiro.dmg"
+  fileName="MagicMiro.dmg"
+  source="magicmiro-download"
+  title="Download MagicMiro v1.0"
+  description="Get notified about updates and new features"
+  fileSize="4.8MB"
+/>
 
 ## How it works 
 
@@ -79,15 +80,14 @@ Each item becomes a perfectly formatted sticky note, ready for your Miro workflo
 
 ## Download MagicMiro
 
-
-<div style={{ textAlign: 'center', margin: '40px 0' }}>
-  <a href="#download-link" style={{ background: '#2196F3', color: 'white', padding: '15px 30px', textDecoration: 'none', borderRadius: '8px', fontWeight: 'bold', display: 'inline-block' }}>
-    📥 Download MagicMiro v1.0
-  </a>
-  <div style={{ marginTop: '10px', color: '#666', fontSize: '14px' }}>
-    Free Download • macOS 11.0+ • 4.8MB
-  </div>
-</div>
+<DownloadWithEmail
+  downloadUrl="/MagicMiro.dmg"
+  fileName="MagicMiro.dmg"
+  source="magicmiro-download"
+  title="Download MagicMiro v1.0"
+  description="Get notified about updates and new features"
+  fileSize="4.8MB"
+/>
 
 *Note* You may see a security warning on first launch. This is normal for new developers on macOS. Right click the app and select "Open" to bypass the warning.
 
