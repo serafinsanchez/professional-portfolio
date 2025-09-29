@@ -1,0 +1,106 @@
+export const meta = {
+  title: "MagicMiro: How I Added a Feature to One of My Favorite Tools",
+  date: "2025-09-03",
+  tags: ["productivity", "miro", "macos", "automation", "developer-tools"],
+  excerpt: "I created a simple menu bar app that solved small workflow problem and saved me a ton of time.",
+  author: "Serafin Sanchez",
+  readTime: "4 min read"
+}
+
+# How I Added a Feature to One of My Favorite Tools: MagicMiro for Miro
+
+## The problem every Miro user knows too well
+
+I live in Miro boards daily for both work and personal projects. I found myself often needing to manually create dozens of sticky notes in Miro from a list of user stories, feedback items, and brainstorming points. Copy. Create new sticky note. Paste. Repeat. When pasting from a spreadsheet, Miro did have a feature that would paste as separate sticky notes, but it didn't work well with multiple lines of text.
+
+## Validating the problem
+
+I wasn't alone in this frustration. Searching through Miro community forums and Reddit, I found dozens of posts from other users describing the same tedious workflow and looking for a solution.
+
+To test if a solution would actually be useful to others, I built a simple web app that could convert clipboard text into the right format that allowed pasting as separate sticky notes. Users could copy their text, paste it into the web tool, convert it, then copy the result back to paste into Miro.
+
+The feedback was clear: **having to switch between browser tabs broke the flow almost as much as the original problem.** What people really wanted was something that lived right in their workflow. That's when I decided a native menu bar app was the right solution.
+
+## What MagicMiro does
+
+MagicMiro is a lightweight macOS application that runs in your menu bar and converts clipboard text into a format that Miro recognizes as multiple sticky notes. It feels simple on purpose.
+
+Here's what happens:
+
+1. **Copy any multi line text** (user stories, feedback, task lists)
+2. **Press CMD+G** (customizable) to convert your clipboard
+3. **Paste in Miro** (CMD+V) and select "Paste data as separate sticky notes"
+4. **Watch as dozens of sticky notes appear instantly** 🎉
+
+
+<div style={{ textAlign: 'center', margin: '30px 0' }}>
+  <a href="#download-link" style={{ background: '#2196F3', color: 'white', padding: '12px 24px', textDecoration: 'none', borderRadius: '6px', fontWeight: 'bold', display: 'inline-block' }}>
+    📥 Download MagicMiro v1.0
+  </a>
+  <div style={{ marginTop: '8px', color: '#666', fontSize: '14px' }}>
+    Free Download • macOS 11.0+ • 4.8MB
+  </div>
+</div>
+
+## How it works 
+
+Imagine you have a list of items like this:
+
+```
+Apple
+Apricot
+Avocado
+Artichoke
+Asparagus
+Almond
+```
+
+**Without MagicMiro:** When you paste this directly into Miro, you get one big text block.
+
+**With MagicMiro:** After copying the text and pressing CMD+G, when you paste into Miro, you'll see a prompt asking how you want to paste the data. Select "Paste data as separate sticky notes" and watch as each line becomes its own individual sticky note:
+
+![Miro paste prompt showing options to paste as separate sticky notes](/images/blog/paste-as.png)
+
+
+
+Each item becomes a perfectly formatted sticky note, ready for your Miro workflow. No more manual creation of dozens of sticky notes!
+
+![Individual sticky notes created by MagicMiro in Miro](/images/blog/stickies.png)
+
+
+## Could be most useful for:
+
+- **Product managers** organizing user stories and requirements
+- **UX researchers** categorizing user feedback and insights
+- **Scrum masters** preparing sprint planning sessions
+- **Designers** organizing design system components
+- **Facilitators and meeting leads** facilitating remote brainstorming sessions
+
+
+## Download MagicMiro
+
+
+<div style={{ textAlign: 'center', margin: '40px 0' }}>
+  <a href="#download-link" style={{ background: '#2196F3', color: 'white', padding: '15px 30px', textDecoration: 'none', borderRadius: '8px', fontWeight: 'bold', display: 'inline-block' }}>
+    📥 Download MagicMiro v1.0
+  </a>
+  <div style={{ marginTop: '10px', color: '#666', fontSize: '14px' }}>
+    Free Download • macOS 11.0+ • 4.8MB
+  </div>
+</div>
+
+*Note* You may see a security warning on first launch. This is normal for new developers on macOS. Right click the app and select "Open" to bypass the warning.
+
+## Questions or Feedback?
+
+What would make this tool even more useful for your workflow? Let me know.
+
+Some ideas I'm considering:
+- **Text formatting preservation** (bold, italic, links)
+- **Custom sticky note colors** based on keywords
+
+I'd love to hear your thoughts. What's missing? What would save you even more time?
+
+## Support and feedback
+
+Have questions or feedback? [Get in touch](/contact) - I'd love to hear how MagicMiro is working for you or what features would make it even more useful.

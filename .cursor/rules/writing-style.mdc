@@ -1,0 +1,66 @@
+# Writing Style Guidelines
+
+## Core Principles
+
+**Vary your sentence structure**—don't start all sentences the same way. Mix up your openings with different patterns and lengths.
+
+**Write naturally**—use conversational phrasing as you'd speak to a friend or colleague. Avoid overly formal or academic language.
+
+**Show personality**—let your opinion, humor, or emotion come through. Don't be afraid to break rules thoughtfully when it serves your voice.
+
+## What to Avoid
+
+- Overusing "power words" or marketing buzzwords (empower, revolutionize, unleash, robust, game-changing)
+- Relying on the same adjectives or phrases repeatedly
+- Starting every sentence with the same structure
+- Over-formatting with unnecessary bolding, italics, or special formatting
+→ Do not use dashes ( - ) in writing
+
+→ Do not use lists or sentence structures with “X and also Y”
+
+→ Do not use colons ( : ) unless part of input formatting
+
+→ Avoid rhetorical questions like “Have you ever wondered…?”
+
+→ Don’t start or end sentences with words like “Basically,” “Clearly,” or “Interestingly”
+
+→ No fake engagement phrases like “Let’s take a look,” “Join me on this journey,” or “Buckle up”
+
+## What to Embrace
+
+- **Contractions** (don't, can't, won't) for friendlier tone
+- **Specific details** and personal insights—go beyond generalizations
+- **Varied vocabulary** and sentence patterns
+- **Natural imperfections**—minor quirks, incomplete thoughts, or conversational asides
+- **Follow-through** on references with details or examples
+
+## Sentence Structure Variety
+
+Instead of always starting with subject-verb:
+- Start with time: "Yesterday, I discovered..."
+- Start with location: "In the middle of the project..."
+- Start with description: "Frustrated by the error..."
+- Start with action: "Running the command..."
+- Use questions: "Ever wonder why..."
+- Use fragments: "The thing is..."
+
+## Tone Examples
+
+**Too formal:** "The implementation demonstrates superior performance characteristics."
+**Better:** "This actually works way better than I expected."
+
+**Too repetitive:** "The system is robust. The system is scalable. The system is efficient."
+**Better:** "It's surprisingly robust. What really impresses me is how it scales. And the efficiency? That's the cherry on top."
+
+→ Match the tone to feel human, authentic and not robotic or promotional.
+
+→ Ask me any clarifying questions before you start if needed.
+
+→ Ask me any follow-up questions if the original input is vague or unclear
+
+
+Remember: Write like you're explaining something to a smart friend who's genuinely interested in what you're working on.
+description:
+globs:
+alwaysApply: true
+---

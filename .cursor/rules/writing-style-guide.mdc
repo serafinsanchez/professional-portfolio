@@ -1,0 +1,83 @@
+# Writing Style Guide: Avoid AI-Generated Language
+
+## Words and Phrases to Avoid
+
+### Overused Business Jargon
+- **Leverage** → Use "use" or "take advantage of"
+- **Utilize** → Use "use" 
+- **Enhance** → Use "improve" or "make better"
+- **Empower** → Use "help" or "enable"
+- **Revolutionize** → Use "change" or "improve significantly"
+- **Transformative** → Use "important" or "significant"
+- **Robust** → Use "strong" or "reliable"
+- **Cutting-edge** → Use "new" or "advanced"
+- **Unleash** → Use "release" or "set free"
+- **Unlock potential** → Use "help improve" or "enable growth"
+
+### Marketing Buzzwords
+- **Streamline** → Use "simplify" or "make easier"
+- **Game-changing** → Use "important" or "significant"
+- **Next-level** → Use "better" or "improved"
+- **Innovative solutions** → Use "new ways" or "better approaches"
+- **Comprehensive approach** → Use "complete method" or "thorough plan"
+- **Seamless integration** → Use "easy connection" or "simple setup"
+- **Optimize** → Use "improve" or "make better"
+- **Maximize/Minimize** → Use "increase/decrease" or "get the most/least from"
+- **Dynamic** → Use "changing" or "flexible"
+- **Best-in-class** → Use "excellent" or "top quality"
+
+### Generic Phrases
+- **Driven by** → Use "based on" or "using"
+- **Industry-leading** → Use "top" or "excellent"
+- **State-of-the-art** → Use "advanced" or "modern"
+- **Synergy** → Use "working together" or "cooperation"
+- **Elevate your [X]** → Use "improve your [X]" or "make your [X] better"
+- **Results-oriented** → Use "focused on results" or "goal-focused"
+- **Groundbreaking** → Use "new" or "important"
+- **Thrive** → Use "succeed" or "do well"
+- **Harness the power** → Use "use" or "take advantage of"
+- **Disruptive** → Use "new" or "different"
+
+## Writing Principles
+
+### Be Specific and Concrete
+- Instead of "leverage cutting-edge technology," say "use new tools"
+- Instead of "comprehensive approach," say "complete plan that covers all areas"
+- Instead of "seamless integration," say "easy to connect with existing systems"
+
+### Use Active Voice
+- "We will optimize the process" → "We will improve the process"
+- "This solution empowers users" → "This solution helps users"
+
+### Add Real Details
+- Include specific examples, numbers, or concrete descriptions
+- Mention actual problems and how you solve them
+- Use real user stories or case studies
+
+### Keep It Human
+- Write like you're talking to a friend
+- Avoid formal business language unless necessary
+- Use contractions (don't, can't, won't)
+- Ask questions to engage readers
+
+## Quick Checklist
+Before publishing, ask yourself:
+- Does this sound like something a real person would say?
+- Could I explain this to a friend over coffee?
+- Am I using specific examples instead of vague promises?
+- Does this avoid marketing buzzwords?
+
+## Examples of Better Alternatives
+
+**Instead of:** "Leverage our cutting-edge platform to revolutionize your workflow"
+**Say:** "Use our new platform to make your work easier and faster"
+
+**Instead of:** "Comprehensive solutions that empower teams to thrive"
+**Say:** "Complete tools that help teams work better and succeed"
+
+**Instead of:** "Seamless integration with industry-leading systems"
+**Say:** "Easy connection with the best systems in your field"
+description:
+globs:
+alwaysApply: true
+---
