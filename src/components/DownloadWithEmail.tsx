@@ -8,7 +8,6 @@ import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 
 const schema = z.object({
-  name: z.string().min(2, 'Please enter your full name'),
   email: z.string().email('Enter a valid email'),
 })
 
@@ -112,21 +111,12 @@ export default function DownloadWithEmail({
       </div>
       
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-3">
-        <div className="grid gap-3 sm:grid-cols-2">
-          <Input 
-            placeholder="Your name" 
-            {...register('name')} 
-            disabled={isLoading}
-            className="sm:col-span-1" 
-          />
-          <Input 
-            type="email" 
-            placeholder="Your email" 
-            {...register('email')} 
-            disabled={isLoading}
-            className="sm:col-span-1" 
-          />
-        </div>
+        <Input 
+          type="email" 
+          placeholder="Your email" 
+          {...register('email')} 
+          disabled={isLoading}
+        />
         
         <Button 
           type="submit" 
@@ -137,7 +127,6 @@ export default function DownloadWithEmail({
         </Button>
       </form>
       
-      {errors.name && <p className="mt-2 text-sm text-red-500">{errors.name.message}</p>}
       {errors.email && <p className="mt-2 text-sm text-red-500">{errors.email.message}</p>}
       {status === 'err' && <p className="mt-2 text-sm text-red-500">Something went wrong. Please try again.</p>}
       

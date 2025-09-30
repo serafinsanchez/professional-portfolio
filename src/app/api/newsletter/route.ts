@@ -10,7 +10,7 @@ const db = init({
 })
 
 const SignupSchema = z.object({
-  name: z.string().min(2).max(120),
+  name: z.string().min(2).max(120).optional(),
   email: z.string().email().max(254),
   source: z.string().max(50).optional(),
 })
@@ -28,7 +28,7 @@ export async function POST(req: Request) {
     const id = crypto.randomUUID()
     await db.transact(
       db.tx.signups[id].update({ 
-        name, 
+        ...(name && { name }), 
         email, 
         source: source || 'newsletter',
         createdAt: Date.now() 
