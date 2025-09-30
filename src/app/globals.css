@@ -152,6 +152,11 @@
     scroll-margin-top: 6rem;
   }
 
+  /* Account for sticky header when navigating to sections */
+  section[id] {
+    scroll-margin-top: 5rem; /* 4rem header + 1rem spacing */
+  }
+
   .prose h1,
   .prose h2,
   .prose h3,
