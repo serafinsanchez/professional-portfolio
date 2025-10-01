@@ -33,18 +33,24 @@ export default function DownloadWithEmail({
   const [hasAccess, setHasAccess] = useState(false)
   const [status, setStatus] = useState<'idle' | 'ok' | 'err'>('idle')
   const [isLoading, setIsLoading] = useState(false)
+  const [isIOS, setIsIOS] = useState(false)
   
   const { register, handleSubmit, formState: { errors }, reset } = useForm<FormData>({ 
     resolver: zodResolver(schema) 
   })
 
-  // Check localStorage on mount
+  // Check localStorage on mount and detect iOS
   useEffect(() => {
     const storageKey = `download_${source}`
     const hasDownloaded = localStorage.getItem(storageKey) === 'true'
     if (hasDownloaded) {
       setHasAccess(true)
     }
+    
+    // Detect iOS devices
+    const userAgent = window.navigator.userAgent.toLowerCase()
+    const iOS = /iphone|ipad|ipod/.test(userAgent)
+    setIsIOS(iOS)
   }, [source])
 
   const onSubmit = async (data: FormData) => {
@@ -75,6 +81,40 @@ export default function DownloadWithEmail({
     }
   }
 
+  // Show iOS warning if on iOS device
+  if (isIOS) {
+    return (
+      <Card className="p-6 text-center border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950">
+        <div className="mb-4">
+          <h3 className="text-lg font-semibold text-foreground">📱 macOS Only</h3>
+          <p className="text-sm text-muted-foreground mt-2">
+            MagicMiro is currently only available for macOS computers (11.0+).
+          </p>
+          <p className="text-sm text-muted-foreground mt-2">
+            Please visit this page on your Mac to download, or share this link with yourself:
+          </p>
+        </div>
+        <Button
+          onClick={() => {
+            if (navigator.share) {
+              navigator.share({
+                title: 'MagicMiro Download',
+                text: 'Download MagicMiro for macOS',
+                url: window.location.href
+              })
+            } else {
+              navigator.clipboard.writeText(window.location.href)
+              alert('Link copied to clipboard!')
+            }
+          }}
+          className="w-full sm:w-auto"
+        >
+          📤 Share This Link
+        </Button>
+      </Card>
+    )
+  }
+
   if (hasAccess) {
     return (
       <Card className="p-6 text-center">
@@ -92,7 +132,7 @@ export default function DownloadWithEmail({
           📥 Download {fileName}
         </a>
         <p className="text-xs text-muted-foreground mt-4">
-          Thanks for downloading! Check your email for updates.
+          Thanks for downloading! 
         </p>
       </Card>
     )

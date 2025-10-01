@@ -3,7 +3,7 @@ import { i } from '@instantdb/react'
 const _schema = i.schema({
   entities: {
     signups: i.entity({
-      name: i.string(),
+      name: i.string().optional(),
       email: i.string().unique().indexed(),
       source: i.string().indexed().optional(),
       createdAt: i.number().indexed(),
